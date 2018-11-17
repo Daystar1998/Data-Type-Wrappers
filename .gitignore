@@ -328,3 +328,6 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+/Data-Type-Wrappers.sln
+/Data-Type-Wrappers/Data-Type-Wrappers.vcxproj.filters
+/Data-Type-Wrappers/Data-Type-Wrappers.vcxproj

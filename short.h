@@ -46,13 +46,13 @@ namespace day {
 		Short(int data) : Primitive(Type::SHORT), data(data) {}
 
 		// Getter
-		inline char getChar() override {
+		inline short getShort() override {
 
 			return data;
 		}
 
 		// Setter
-		inline void setChar(char data) override {
+		inline void setShort(short data) override {
 
 			this->data = data;
 		}

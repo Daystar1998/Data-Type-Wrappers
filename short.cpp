@@ -34,27 +34,27 @@ namespace day {
 
 			case CHAR:
 
-				this->setChar(primitive.getChar());
+				this->setShort(primitive.getChar());
 				break;
 			case SHORT:
 
-				this->setChar(primitive.getShort());
+				this->setShort(primitive.getShort());
 				break;
 			case INTEGER:
 
-				this->setChar(primitive.getInt());
+				this->setShort(primitive.getInt());
 				break;
 			case LONG:
 
-				this->setChar(primitive.getLong());
+				this->setShort(primitive.getLong());
 				break;
 			case FLOAT:
 
-				this->setChar(primitive.getFloat());
+				this->setShort(primitive.getFloat());
 				break;
 			case DOUBLE:
 
-				this->setChar(primitive.getDouble());
+				this->setShort(primitive.getDouble());
 				break;
 			default:
 
@@ -73,27 +73,27 @@ namespace day {
 
 			case CHAR:
 
-				result.setChar(this->getChar() + primitive.getChar());
+				result.setShort(this->getShort() + primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setChar(this->getChar() + primitive.getShort());
+				result.setShort(this->getShort() + primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setChar(this->getChar() + primitive.getInt());
+				result.setShort(this->getShort() + primitive.getInt());
 				break;
 			case LONG:
 
-				result.setChar(this->getChar() + primitive.getLong());
+				result.setShort(this->getShort() + primitive.getLong());
 				break;
 			case FLOAT:
 
-				result.setChar(this->getChar() + primitive.getFloat());
+				result.setShort(this->getShort() + primitive.getFloat());
 				break;
 			case DOUBLE:
 
-				result.setChar(this->getChar() + primitive.getDouble());
+				result.setShort(this->getShort() + primitive.getDouble());
 				break;
 			default:
 
@@ -112,27 +112,27 @@ namespace day {
 
 			case CHAR:
 
-				result.setChar(this->getChar() - primitive.getChar());
+				result.setShort(this->getShort() - primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setChar(this->getChar() - primitive.getShort());
+				result.setShort(this->getShort() - primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setChar(this->getChar() - primitive.getInt());
+				result.setShort(this->getShort() - primitive.getInt());
 				break;
 			case LONG:
 
-				result.setChar(this->getChar() - primitive.getLong());
+				result.setShort(this->getShort() - primitive.getLong());
 				break;
 			case FLOAT:
 
-				result.setChar(this->getChar() - primitive.getFloat());
+				result.setShort(this->getShort() - primitive.getFloat());
 				break;
 			case DOUBLE:
 
-				result.setChar(this->getChar() - primitive.getDouble());
+				result.setShort(this->getShort() - primitive.getDouble());
 				break;
 			default:
 
@@ -151,27 +151,27 @@ namespace day {
 
 			case CHAR:
 
-				result.setChar(this->getChar() * primitive.getChar());
+				result.setShort(this->getShort() * primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setChar(this->getChar() * primitive.getShort());
+				result.setShort(this->getShort() * primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setChar(this->getChar() * primitive.getInt());
+				result.setShort(this->getShort() * primitive.getInt());
 				break;
 			case LONG:
 
-				result.setChar(this->getChar() * primitive.getLong());
+				result.setShort(this->getShort() * primitive.getLong());
 				break;
 			case FLOAT:
 
-				result.setChar(this->getChar() * primitive.getFloat());
+				result.setShort(this->getShort() * primitive.getFloat());
 				break;
 			case DOUBLE:
 
-				result.setChar(this->getChar() * primitive.getDouble());
+				result.setShort(this->getShort() * primitive.getDouble());
 				break;
 			default:
 
@@ -190,27 +190,27 @@ namespace day {
 
 			case CHAR:
 
-				result.setChar(this->getChar() / primitive.getChar());
+				result.setShort(this->getShort() / primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setChar(this->getChar() / primitive.getShort());
+				result.setShort(this->getShort() / primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setChar(this->getChar() / primitive.getInt());
+				result.setShort(this->getShort() / primitive.getInt());
 				break;
 			case LONG:
 
-				result.setChar(this->getChar() / primitive.getLong());
+				result.setShort(this->getShort() / primitive.getLong());
 				break;
 			case FLOAT:
 
-				result.setChar(this->getChar() / primitive.getFloat());
+				result.setShort(this->getShort() / primitive.getFloat());
 				break;
 			case DOUBLE:
 
-				result.setChar(this->getChar() / primitive.getDouble());
+				result.setShort(this->getShort() / primitive.getDouble());
 				break;
 			default:
 
@@ -229,27 +229,27 @@ namespace day {
 
 			case CHAR:
 
-				result.setChar(this->getChar() % primitive.getChar());
+				result.setShort(this->getShort() % primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setChar(this->getChar() % primitive.getShort());
+				result.setShort(this->getShort() % primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setChar(this->getChar() % primitive.getInt());
+				result.setShort(this->getShort() % primitive.getInt());
 				break;
 			case LONG:
 
-				result.setChar(this->getChar() % primitive.getLong());
+				result.setShort(this->getShort() % primitive.getLong());
 				break;
 			case FLOAT:
 				// TODO: Decide whether on not to remove this
-				result.setChar(this->getChar() % (int)primitive.getFloat());
+				result.setShort(this->getShort() % (int)primitive.getFloat());
 				break;
 			case DOUBLE:
 
-				result.setChar(this->getChar() % (int)primitive.getDouble());
+				result.setShort(this->getShort() % (int)primitive.getDouble());
 				break;
 			default:
 
@@ -302,19 +302,19 @@ namespace day {
 
 			case CHAR:
 
-				result.setChar(this->getChar() | primitive.getChar());
+				result.setShort(this->getShort() | primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setChar(this->getChar() | primitive.getShort());
+				result.setShort(this->getShort() | primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setChar(this->getChar() | primitive.getInt());
+				result.setShort(this->getShort() | primitive.getInt());
 				break;
 			case LONG:
 
-				result.setChar(this->getChar() | primitive.getLong());
+				result.setShort(this->getShort() | primitive.getLong());
 				break;
 			default:
 
@@ -333,19 +333,19 @@ namespace day {
 
 			case CHAR:
 
-				result.setChar(this->getChar() & primitive.getChar());
+				result.setShort(this->getShort() & primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setChar(this->getChar() & primitive.getShort());
+				result.setShort(this->getShort() & primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setChar(this->getChar() & primitive.getInt());
+				result.setShort(this->getShort() & primitive.getInt());
 				break;
 			case LONG:
 
-				result.setChar(this->getChar() & primitive.getLong());
+				result.setShort(this->getShort() & primitive.getLong());
 				break;
 			default:
 
@@ -360,7 +360,7 @@ namespace day {
 
 		Short result;
 
-		result.setChar(~this->getChar());
+		result.setShort(~this->getShort());
 
 		return result;
 	}
@@ -374,19 +374,19 @@ namespace day {
 
 			case CHAR:
 
-				result.setChar(this->getChar() ^ primitive.getChar());
+				result.setShort(this->getShort() ^ primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setChar(this->getChar() ^ primitive.getShort());
+				result.setShort(this->getShort() ^ primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setChar(this->getChar() ^ primitive.getInt());
+				result.setShort(this->getShort() ^ primitive.getInt());
 				break;
 			case LONG:
 
-				result.setChar(this->getChar() ^ primitive.getLong());
+				result.setShort(this->getShort() ^ primitive.getLong());
 				break;
 			default:
 
@@ -405,19 +405,19 @@ namespace day {
 
 			case CHAR:
 
-				result.setChar(this->getChar() << primitive.getChar());
+				result.setShort(this->getShort() << primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setChar(this->getChar() << primitive.getShort());
+				result.setShort(this->getShort() << primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setChar(this->getChar() << primitive.getInt());
+				result.setShort(this->getShort() << primitive.getInt());
 				break;
 			case LONG:
 
-				result.setChar(this->getChar() << primitive.getLong());
+				result.setShort(this->getShort() << primitive.getLong());
 				break;
 			default:
 
@@ -436,19 +436,19 @@ namespace day {
 
 			case CHAR:
 
-				result.setChar(this->getChar() >> primitive.getChar());
+				result.setShort(this->getShort() >> primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setChar(this->getChar() >> primitive.getShort());
+				result.setShort(this->getShort() >> primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setChar(this->getChar() >> primitive.getInt());
+				result.setShort(this->getShort() >> primitive.getInt());
 				break;
 			case LONG:
 
-				result.setChar(this->getChar() >> primitive.getLong());
+				result.setShort(this->getShort() >> primitive.getLong());
 				break;
 			default:
 
@@ -467,29 +467,29 @@ namespace day {
 
 			case CHAR:
 
-				result = this->getChar() == primitive.getChar();
+				result = this->getShort() == primitive.getChar();
 				break;
 			case SHORT:
 
-				result = this->getChar() == primitive.getShort();
+				result = this->getShort() == primitive.getShort();
 				break;
 			case INTEGER:
 
-				result = this->getChar() == primitive.getInt();
+				result = this->getShort() == primitive.getInt();
 				break;
 			case LONG:
 
-				result = this->getChar() == primitive.getLong();
+				result = this->getShort() == primitive.getLong();
 				break;
 			case FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getChar() == primitive.getFloat();
+				result = this->getShort() == primitive.getFloat();
 				break;
 			case DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getChar() == primitive.getDouble();
+				result = this->getShort() == primitive.getDouble();
 				break;
 			default:
 
@@ -508,29 +508,29 @@ namespace day {
 
 			case CHAR:
 
-				result = this->getChar() != primitive.getChar();
+				result = this->getShort() != primitive.getChar();
 				break;
 			case SHORT:
 
-				result = this->getChar() != primitive.getShort();
+				result = this->getShort() != primitive.getShort();
 				break;
 			case INTEGER:
 
-				result = this->getChar() != primitive.getInt();
+				result = this->getShort() != primitive.getInt();
 				break;
 			case LONG:
 
-				result = this->getChar() != primitive.getLong();
+				result = this->getShort() != primitive.getLong();
 				break;
 			case FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getChar() != primitive.getFloat();
+				result = this->getShort() != primitive.getFloat();
 				break;
 			case DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getChar() != primitive.getDouble();
+				result = this->getShort() != primitive.getDouble();
 				break;
 			default:
 
@@ -549,29 +549,29 @@ namespace day {
 
 			case CHAR:
 
-				result = this->getChar() > primitive.getChar();
+				result = this->getShort() > primitive.getChar();
 				break;
 			case SHORT:
 
-				result = this->getChar() > primitive.getShort();
+				result = this->getShort() > primitive.getShort();
 				break;
 			case INTEGER:
 
-				result = this->getChar() > primitive.getInt();
+				result = this->getShort() > primitive.getInt();
 				break;
 			case LONG:
 
-				result = this->getChar() > primitive.getLong();
+				result = this->getShort() > primitive.getLong();
 				break;
 			case FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getChar() > primitive.getFloat();
+				result = this->getShort() > primitive.getFloat();
 				break;
 			case DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getChar() > primitive.getDouble();
+				result = this->getShort() > primitive.getDouble();
 				break;
 			default:
 
@@ -590,29 +590,29 @@ namespace day {
 
 			case CHAR:
 
-				result = this->getChar() < primitive.getChar();
+				result = this->getShort() < primitive.getChar();
 				break;
 			case SHORT:
 
-				result = this->getChar() < primitive.getShort();
+				result = this->getShort() < primitive.getShort();
 				break;
 			case INTEGER:
 
-				result = this->getChar() < primitive.getInt();
+				result = this->getShort() < primitive.getInt();
 				break;
 			case LONG:
 
-				result = this->getChar() < primitive.getLong();
+				result = this->getShort() < primitive.getLong();
 				break;
 			case FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getChar() < primitive.getFloat();
+				result = this->getShort() < primitive.getFloat();
 				break;
 			case DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getChar() < primitive.getDouble();
+				result = this->getShort() < primitive.getDouble();
 				break;
 			default:
 
@@ -631,29 +631,29 @@ namespace day {
 
 			case CHAR:
 
-				result = this->getChar() >= primitive.getChar();
+				result = this->getShort() >= primitive.getChar();
 				break;
 			case SHORT:
 
-				result = this->getChar() >= primitive.getShort();
+				result = this->getShort() >= primitive.getShort();
 				break;
 			case INTEGER:
 
-				result = this->getChar() >= primitive.getInt();
+				result = this->getShort() >= primitive.getInt();
 				break;
 			case LONG:
 
-				result = this->getChar() >= primitive.getLong();
+				result = this->getShort() >= primitive.getLong();
 				break;
 			case FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getChar() >= primitive.getFloat();
+				result = this->getShort() >= primitive.getFloat();
 				break;
 			case DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getChar() >= primitive.getDouble();
+				result = this->getShort() >= primitive.getDouble();
 				break;
 			default:
 
@@ -672,29 +672,29 @@ namespace day {
 
 			case CHAR:
 
-				result = this->getChar() <= primitive.getChar();
+				result = this->getShort() <= primitive.getChar();
 				break;
 			case SHORT:
 
-				result = this->getChar() <= primitive.getShort();
+				result = this->getShort() <= primitive.getShort();
 				break;
 			case INTEGER:
 
-				result = this->getChar() <= primitive.getInt();
+				result = this->getShort() <= primitive.getInt();
 				break;
 			case LONG:
 
-				result = this->getChar() <= primitive.getLong();
+				result = this->getShort() <= primitive.getLong();
 				break;
 			case FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getChar() <= primitive.getFloat();
+				result = this->getShort() <= primitive.getFloat();
 				break;
 			case DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getChar() <= primitive.getDouble();
+				result = this->getShort() <= primitive.getDouble();
 				break;
 			default:
 
