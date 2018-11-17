@@ -15,46 +15,51 @@
 ******************************************************************************/
 
 /******************************************************************************
-	File Name: double.cpp
+	File Name: float.cpp
 
 	Author: Matthew Day
 
 	Description:
-		Implementation file for double.h
+		Implementation file for float.h
 ******************************************************************************/
 
-#include "double.h"
+#include "float.h"
 
 namespace day {
 
+	string Float::toString() {
+
+		return to_string(data);
+	}
+
 	// Assignment
-	Double& Double::operator=(Primitive &primitive) {
+	Float& Float::operator=(Primitive &primitive) {
 
 		switch (primitive.getType()) {
 
 			case CHAR:
 
-				this->setDouble(primitive.getChar());
+				this->setFloat(primitive.getChar());
 				break;
 			case SHORT:
 
-				this->setDouble(primitive.getShort());
+				this->setFloat(primitive.getShort());
 				break;
 			case INTEGER:
 
-				this->setDouble(primitive.getInt());
+				this->setFloat(primitive.getInt());
 				break;
 			case LONG:
 
-				this->setDouble(primitive.getLong());
+				this->setFloat(primitive.getLong());
 				break;
 			case FLOAT:
 
-				this->setDouble(primitive.getFloat());
+				this->setFloat(primitive.getFloat());
 				break;
 			case DOUBLE:
 
-				this->setDouble(primitive.getDouble());
+				this->setFloat(primitive.getDouble());
 				break;
 			default:
 
@@ -65,35 +70,35 @@ namespace day {
 	}
 
 	// Addition
-	Double Double::operator+(Primitive &primitive) {
+	Float Float::operator+(Primitive &primitive) {
 
-		Double result;
+		Float result;
 
 		switch (primitive.getType()) {
 
 			case CHAR:
 
-				result.setDouble(this->getDouble() + primitive.getChar());
+				result.setFloat(this->getFloat() + primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setDouble(this->getDouble() + primitive.getShort());
+				result.setFloat(this->getFloat() + primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setDouble(this->getDouble() + primitive.getInt());
+				result.setFloat(this->getFloat() + primitive.getInt());
 				break;
 			case LONG:
 
-				result.setDouble(this->getDouble() + primitive.getLong());
+				result.setFloat(this->getFloat() + primitive.getLong());
 				break;
 			case FLOAT:
 
-				result.setDouble(this->getDouble() + primitive.getFloat());
+				result.setFloat(this->getFloat() + primitive.getFloat());
 				break;
 			case DOUBLE:
 
-				result.setDouble(this->getDouble() + primitive.getDouble());
+				result.setFloat(this->getFloat() + primitive.getDouble());
 				break;
 			default:
 
@@ -104,35 +109,35 @@ namespace day {
 	}
 
 	// Subtraction
-	Double Double::operator-(Primitive &primitive) {
+	Float Float::operator-(Primitive &primitive) {
 
-		Double result;
+		Float result;
 
 		switch (primitive.getType()) {
 
 			case CHAR:
 
-				result.setDouble(this->getDouble() - primitive.getChar());
+				result.setFloat(this->getFloat() - primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setDouble(this->getDouble() - primitive.getShort());
+				result.setFloat(this->getFloat() - primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setDouble(this->getDouble() - primitive.getInt());
+				result.setFloat(this->getFloat() - primitive.getInt());
 				break;
 			case LONG:
 
-				result.setDouble(this->getDouble() - primitive.getLong());
+				result.setFloat(this->getFloat() - primitive.getLong());
 				break;
 			case FLOAT:
 
-				result.setDouble(this->getDouble() - primitive.getFloat());
+				result.setFloat(this->getFloat() - primitive.getFloat());
 				break;
 			case DOUBLE:
 
-				result.setDouble(this->getDouble() - primitive.getDouble());
+				result.setFloat(this->getFloat() - primitive.getDouble());
 				break;
 			default:
 
@@ -143,35 +148,35 @@ namespace day {
 	}
 
 	// Multiplication
-	Double Double::operator*(Primitive &primitive) {
+	Float Float::operator*(Primitive &primitive) {
 
-		Double result;
+		Float result;
 
 		switch (primitive.getType()) {
 
 			case CHAR:
 
-				result.setDouble(this->getDouble() * primitive.getChar());
+				result.setFloat(this->getFloat() * primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setDouble(this->getDouble() * primitive.getShort());
+				result.setFloat(this->getFloat() * primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setDouble(this->getDouble() * primitive.getInt());
+				result.setFloat(this->getFloat() * primitive.getInt());
 				break;
 			case LONG:
 
-				result.setDouble(this->getDouble() * primitive.getLong());
+				result.setFloat(this->getFloat() * primitive.getLong());
 				break;
 			case FLOAT:
 
-				result.setDouble(this->getDouble() * primitive.getFloat());
+				result.setFloat(this->getFloat() * primitive.getFloat());
 				break;
 			case DOUBLE:
 
-				result.setDouble(this->getDouble() * primitive.getDouble());
+				result.setFloat(this->getFloat() * primitive.getDouble());
 				break;
 			default:
 
@@ -182,35 +187,35 @@ namespace day {
 	}
 
 	// Division
-	Double Double::operator/(Primitive &primitive) {
+	Float Float::operator/(Primitive &primitive) {
 
-		Double result;
+		Float result;
 
 		switch (primitive.getType()) {
 
 			case CHAR:
 
-				result.setDouble(this->getDouble() / primitive.getChar());
+				result.setFloat(this->getFloat() / primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setDouble(this->getDouble() / primitive.getShort());
+				result.setFloat(this->getFloat() / primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setDouble(this->getDouble() / primitive.getInt());
+				result.setFloat(this->getFloat() / primitive.getInt());
 				break;
 			case LONG:
 
-				result.setDouble(this->getDouble() / primitive.getLong());
+				result.setFloat(this->getFloat() / primitive.getLong());
 				break;
 			case FLOAT:
 
-				result.setDouble(this->getDouble() / primitive.getFloat());
+				result.setFloat(this->getFloat() / primitive.getFloat());
 				break;
 			case DOUBLE:
 
-				result.setDouble(this->getDouble() / primitive.getDouble());
+				result.setFloat(this->getFloat() / primitive.getDouble());
 				break;
 			default:
 
@@ -221,7 +226,7 @@ namespace day {
 	}
 
 	// Prefix incrementation
-	Double& Double::operator++() {
+	Float& Float::operator++() {
 
 		this->data++;
 
@@ -229,16 +234,16 @@ namespace day {
 	}
 
 	// Postfix incrementation
-	Double Double::operator++(int) {
+	Float Float::operator++(int) {
 
-		Double result = *this;
+		Float result = *this;
 		++*this;
 
 		return result;
 	}
 
 	// Prefix decrementation
-	Double& Double::operator--() {
+	Float& Float::operator--() {
 
 		this->data--;
 
@@ -246,16 +251,16 @@ namespace day {
 	}
 
 	// Postfix decrementation
-	Double Double::operator--(int) {
+	Float Float::operator--(int) {
 
-		Double result = *this;
+		Float result = *this;
 		--*this;
 
 		return result;
 	}
 
 	// Equals
-	bool Double::operator==(Primitive &primitive) {
+	bool Float::operator==(Primitive &primitive) {
 
 		bool result;
 
@@ -263,29 +268,29 @@ namespace day {
 
 			case CHAR:
 
-				result = this->getDouble() == primitive.getChar();
+				result = this->getFloat() == primitive.getChar();
 				break;
 			case SHORT:
 
-				result = this->getDouble() == primitive.getShort();
+				result = this->getFloat() == primitive.getShort();
 				break;
 			case INTEGER:
 
-				result = this->getDouble() == primitive.getInt();
+				result = this->getFloat() == primitive.getInt();
 				break;
 			case LONG:
 
-				result = this->getDouble() == primitive.getLong();
+				result = this->getFloat() == primitive.getLong();
 				break;
 			case FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() == primitive.getFloat();
+				result = this->getFloat() == primitive.getFloat();
 				break;
 			case DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() == primitive.getDouble();
+				result = this->getFloat() == primitive.getDouble();
 				break;
 			default:
 
@@ -296,7 +301,7 @@ namespace day {
 	}
 
 	// Not equal
-	bool Double::operator!=(Primitive &primitive) {
+	bool Float::operator!=(Primitive &primitive) {
 
 		bool result;
 
@@ -304,29 +309,29 @@ namespace day {
 
 			case CHAR:
 
-				result = this->getDouble() != primitive.getChar();
+				result = this->getFloat() != primitive.getChar();
 				break;
 			case SHORT:
 
-				result = this->getDouble() != primitive.getShort();
+				result = this->getFloat() != primitive.getShort();
 				break;
 			case INTEGER:
 
-				result = this->getDouble() != primitive.getInt();
+				result = this->getFloat() != primitive.getInt();
 				break;
 			case LONG:
 
-				result = this->getDouble() != primitive.getLong();
+				result = this->getFloat() != primitive.getLong();
 				break;
 			case FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() != primitive.getFloat();
+				result = this->getFloat() != primitive.getFloat();
 				break;
 			case DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() != primitive.getDouble();
+				result = this->getFloat() != primitive.getDouble();
 				break;
 			default:
 
@@ -337,7 +342,7 @@ namespace day {
 	}
 
 	// Greater than
-	bool Double::operator>(Primitive &primitive) {
+	bool Float::operator>(Primitive &primitive) {
 
 		bool result;
 
@@ -345,29 +350,29 @@ namespace day {
 
 			case CHAR:
 
-				result = this->getDouble() > primitive.getChar();
+				result = this->getFloat() > primitive.getChar();
 				break;
 			case SHORT:
 
-				result = this->getDouble() > primitive.getShort();
+				result = this->getFloat() > primitive.getShort();
 				break;
 			case INTEGER:
 
-				result = this->getDouble() > primitive.getInt();
+				result = this->getFloat() > primitive.getInt();
 				break;
 			case LONG:
 
-				result = this->getDouble() > primitive.getLong();
+				result = this->getFloat() > primitive.getLong();
 				break;
 			case FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() > primitive.getFloat();
+				result = this->getFloat() > primitive.getFloat();
 				break;
 			case DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() > primitive.getDouble();
+				result = this->getFloat() > primitive.getDouble();
 				break;
 			default:
 
@@ -378,7 +383,7 @@ namespace day {
 	}
 
 	// Less than
-	bool Double::operator<(Primitive &primitive) {
+	bool Float::operator<(Primitive &primitive) {
 
 		bool result;
 
@@ -386,29 +391,29 @@ namespace day {
 
 			case CHAR:
 
-				result = this->getDouble() < primitive.getChar();
+				result = this->getFloat() < primitive.getChar();
 				break;
 			case SHORT:
 
-				result = this->getDouble() < primitive.getShort();
+				result = this->getFloat() < primitive.getShort();
 				break;
 			case INTEGER:
 
-				result = this->getDouble() < primitive.getInt();
+				result = this->getFloat() < primitive.getInt();
 				break;
 			case LONG:
 
-				result = this->getDouble() < primitive.getLong();
+				result = this->getFloat() < primitive.getLong();
 				break;
 			case FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() < primitive.getFloat();
+				result = this->getFloat() < primitive.getFloat();
 				break;
 			case DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() < primitive.getDouble();
+				result = this->getFloat() < primitive.getDouble();
 				break;
 			default:
 
@@ -419,7 +424,7 @@ namespace day {
 	}
 
 	// Greater than or equal to
-	bool Double::operator>=(Primitive &primitive) {
+	bool Float::operator>=(Primitive &primitive) {
 
 		bool result;
 
@@ -427,29 +432,29 @@ namespace day {
 
 			case CHAR:
 
-				result = this->getDouble() >= primitive.getChar();
+				result = this->getFloat() >= primitive.getChar();
 				break;
 			case SHORT:
 
-				result = this->getDouble() >= primitive.getShort();
+				result = this->getFloat() >= primitive.getShort();
 				break;
 			case INTEGER:
 
-				result = this->getDouble() >= primitive.getInt();
+				result = this->getFloat() >= primitive.getInt();
 				break;
 			case LONG:
 
-				result = this->getDouble() >= primitive.getLong();
+				result = this->getFloat() >= primitive.getLong();
 				break;
 			case FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() >= primitive.getFloat();
+				result = this->getFloat() >= primitive.getFloat();
 				break;
 			case DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() >= primitive.getDouble();
+				result = this->getFloat() >= primitive.getDouble();
 				break;
 			default:
 
@@ -460,7 +465,7 @@ namespace day {
 	}
 
 	// Less than or equal to
-	bool Double::operator<=(Primitive &primitive) {
+	bool Float::operator<=(Primitive &primitive) {
 
 		bool result;
 
@@ -468,29 +473,29 @@ namespace day {
 
 			case CHAR:
 
-				result = this->getDouble() <= primitive.getChar();
+				result = this->getFloat() <= primitive.getChar();
 				break;
 			case SHORT:
 
-				result = this->getDouble() <= primitive.getShort();
+				result = this->getFloat() <= primitive.getShort();
 				break;
 			case INTEGER:
 
-				result = this->getDouble() <= primitive.getInt();
+				result = this->getFloat() <= primitive.getInt();
 				break;
 			case LONG:
 
-				result = this->getDouble() <= primitive.getLong();
+				result = this->getFloat() <= primitive.getLong();
 				break;
 			case FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() <= primitive.getFloat();
+				result = this->getFloat() <= primitive.getFloat();
 				break;
 			case DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() <= primitive.getDouble();
+				result = this->getFloat() <= primitive.getDouble();
 				break;
 			default:
 
@@ -501,7 +506,7 @@ namespace day {
 	}
 
 	// Addition assignment
-	Double& Double::operator+=(Primitive &primitive) {
+	Float& Float::operator+=(Primitive &primitive) {
 
 		*this = (Primitive&)(*this + primitive);
 
@@ -509,7 +514,7 @@ namespace day {
 	}
 
 	// Subtraction assignment
-	Double& Double::operator-=(Primitive &primitive) {
+	Float& Float::operator-=(Primitive &primitive) {
 
 		*this = (Primitive&)(*this - primitive);
 
@@ -517,7 +522,7 @@ namespace day {
 	}
 
 	// Multiplication assignment
-	Double& Double::operator*=(Primitive &primitive) {
+	Float& Float::operator*=(Primitive &primitive) {
 
 		*this = (Primitive&)(*this * primitive);
 
@@ -525,9 +530,17 @@ namespace day {
 	}
 
 	// Division assignment
-	Double& Double::operator/=(Primitive &primitive) {
+	Float& Float::operator/=(Primitive &primitive) {
 
 		*this = (Primitive&)(*this / primitive);
+
+		return *this;
+	}
+
+	// Addition assignment
+	Float& Float::operator+=(Primitive &primitive) {
+
+		*this = (Primitive&)(*this + primitive);
 
 		return *this;
 	}

@@ -27,6 +27,11 @@
 
 namespace day {
 
+	string Short::toString() {
+
+		return to_string(data);
+	}
+
 	// Assignment
 	Short& Short::operator=(Primitive &primitive) {
 

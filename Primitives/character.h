@@ -15,44 +15,57 @@
 ******************************************************************************/
 
 /******************************************************************************
-	File Name: double.h
+	File Name: character.h
 
 	Author: Matthew Day
 
-	Class Name: Double
+	Class Name: Character
 
 	Description:
-		Wrapper class for double
+		Wrapper class for char
 ******************************************************************************/
 
 #pragma once
 
 #include "primitives.h"
 
+using std::to_string;
+
 namespace day {
 
-	class Double : public Primitive {
+	class Character : public Primitive {
 
 	private:
 
-		double data;
+		char data;
 
-		Double() : Primitive(Type::DOUBLE), data(0) {}
+		Character() : Primitive(Type::CHAR), data(0) {}
 	public:
 
 		/******************************************************************************
 		Constructor
 		******************************************************************************/
-		Double(double data) : Primitive(Type::DOUBLE), data(data) {}
+		Character(char data) : Primitive(Type::CHAR), data(data) {}
+
+		/******************************************************************************
+			Function Name: toString
+
+			Des:
+				Get the data as a string
+
+			Returns:
+				type string, data as a string
+		******************************************************************************/
+		string toString() override;
 
 		// Getter
-		inline double getDouble() override {
+		inline char getChar() override {
 
 			return data;
 		}
 
 		// Setter
-		inline void setDouble(double data) override {
+		inline void setChar(char data) override {
 
 			this->data = data;
 		}
@@ -72,9 +85,9 @@ namespace day {
 					assigned to
 
 			Returns:
-				type Double &, the resulting value
+				type Character &, the resulting value
 		******************************************************************************/
-		Double& operator=(Primitive &primitive);
+		Character& operator=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator+
@@ -86,9 +99,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be added to
 
 			Returns:
-				type Double, the resulting value
+				type Character, the resulting value
 		******************************************************************************/
-		Double operator+(Primitive &primitive);
+		Character operator+(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator-
@@ -100,9 +113,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be subtracted by
 
 			Returns:
-				type Double, the resulting value
+				type Character, the resulting value
 		******************************************************************************/
-		Double operator-(Primitive &primitive);
+		Character operator-(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator*
@@ -114,9 +127,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be multiplied by
 
 			Returns:
-				type Double &, the resulting value
+				type Character &, the resulting value
 		******************************************************************************/
-		Double operator*(Primitive &primitive);
+		Character operator*(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator/
@@ -128,9 +141,23 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be divided by
 
 			Returns:
-				type Double, the resulting value
+				type Character, the resulting value
 		******************************************************************************/
-		Double operator/(Primitive &primitive);
+		Character operator/(Primitive &primitive);
+
+		/******************************************************************************
+			Function Name: operator%
+
+			Des:
+				Override modulation operator
+
+			Params:
+				primitive - type Primitive &, the primitive type to be modulated by
+
+			Returns:
+				type Character, the resulting value
+		******************************************************************************/
+		Character operator%(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator++
@@ -139,9 +166,9 @@ namespace day {
 				Override prefix increment operator
 
 			Returns:
-				type Double &, the resulting value
+				type Character &, the resulting value
 		******************************************************************************/
-		Double& operator++();
+		Character& operator++();
 
 		/******************************************************************************
 			Function Name: operator++
@@ -150,9 +177,9 @@ namespace day {
 				Override postfix increment operator
 
 			Returns:
-				type Double, the resulting value
+				type Character, the resulting value
 		******************************************************************************/
-		Double operator++(int);
+		Character operator++(int);
 
 		/******************************************************************************
 			Function Name: operator--
@@ -161,9 +188,9 @@ namespace day {
 				Override prefix decrement operator
 
 			Returns:
-				type Double &, the resulting value
+				type Character &, the resulting value
 		******************************************************************************/
-		Double& operator--();
+		Character& operator--();
 
 		/******************************************************************************
 			Function Name: operator--
@@ -172,9 +199,94 @@ namespace day {
 				Override postfix decrement operator
 
 			Returns:
-				type Double, the resulting value
+				type Character, the resulting value
 		******************************************************************************/
-		Double operator--(int);
+		Character operator--(int);
+
+		/******************************************************************************
+			Bitwise operators
+		******************************************************************************/
+
+		/******************************************************************************
+			Function Name: operator|
+
+			Des:
+				Override bitwise OR operator
+
+			Params:
+				primitive - type Primitive &, the primitive type to be bitwise OR'd by
+
+			Returns:
+				type Character, the resulting value
+		******************************************************************************/
+		Character operator|(Primitive &primitive);
+
+		/******************************************************************************
+			Function Name: operator&
+
+			Des:
+				Override bitwise AND operator
+
+			Params:
+				primitive - type Primitive &, the primitive type to be bitwise AND'd by
+
+			Returns:
+				type Character, the resulting value
+		******************************************************************************/
+		Character operator&(Primitive &primitive);
+
+		/******************************************************************************
+			Function Name: operator~
+
+			Des:
+				Override bitwise NOT operator
+
+			Returns:
+				type Character, the resulting value
+		******************************************************************************/
+		Character operator~();
+
+		/******************************************************************************
+			Function Name: operator^
+
+			Des:
+				Override bitwise XOR operator
+
+			Params:
+				primitive - type Primitive &, the primitive type to be bitwise XOR'd by
+
+			Returns:
+				type Character, the resulting value
+		******************************************************************************/
+		Character operator^(Primitive &primitive);
+
+		/******************************************************************************
+			Function Name: operator<<
+
+			Des:
+				Override left shift operator
+
+			Params:
+				primitive - type Primitive &, the primitive type to be shifted by
+
+			Returns:
+				type Character, the resulting value
+		******************************************************************************/
+		Character operator<<(Primitive &primitive);
+
+		/******************************************************************************
+			Function Name: operator>>
+
+			Des:
+				Override right shift operator
+
+			Params:
+				primitive - type Primitive &, the primitive type to be shifted by
+
+			Returns:
+				type Character, the resulting value
+		******************************************************************************/
+		Character operator>>(Primitive &primitive);
 
 		/******************************************************************************
 			Comparison operators
@@ -278,9 +390,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be added to
 
 			Returns:
-				type Double &, the resulting value
+				type Character &, the resulting value
 		******************************************************************************/
-		Double& operator+=(Primitive &primitive);
+		Character& operator+=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator-=
@@ -292,9 +404,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be subtracted by
 
 			Returns:
-				type Double &, the resulting value
+				type Character &, the resulting value
 		******************************************************************************/
-		Double& operator-=(Primitive &primitive);
+		Character& operator-=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator*=
@@ -306,9 +418,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be multiplied by
 
 			Returns:
-				type Double &, the resulting value
+				type Character &, the resulting value
 		******************************************************************************/
-		Double& operator*=(Primitive &primitive);
+		Character& operator*=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator/=
@@ -320,8 +432,92 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be divided by
 
 			Returns:
-				type Double &, the resulting value
+				type Character &, the resulting value
 		******************************************************************************/
-		Double& operator/=(Primitive &primitive);
+		Character& operator/=(Primitive &primitive);
+
+		/******************************************************************************
+			Function Name: operator%=
+
+			Des:
+				Override modulation assignment operator
+
+			Params:
+				primitive - type Primitive &, the primitive type to be modulated by
+
+			Returns:
+				type Character &, the resulting value
+		******************************************************************************/
+		Character& operator%=(Primitive &primitive);
+
+		/******************************************************************************
+			Function Name: operator&=
+
+			Des:
+				Override bitwise AND assignment operator
+
+			Params:
+				primitive - type Primitive &, the primitive type to be AND'd by
+
+			Returns:
+				type Character &, the resulting value
+		******************************************************************************/
+		Character& operator&=(Primitive &primitive);
+
+		/******************************************************************************
+			Function Name: operator|=
+
+			Des:
+				Override bitwise OR assignment operator
+
+			Params:
+				primitive - type Primitive &, the primitive type to be OR'd by
+
+			Returns:
+				type Character &, the resulting value
+		******************************************************************************/
+		Character& operator|=(Primitive &primitive);
+
+		/******************************************************************************
+			Function Name: operator^=
+
+			Des:
+				Override bitwise XOR assignment operator
+
+			Params:
+				primitive - type Primitive &, the primitive type to be XOR'd by
+
+			Returns:
+				type Character &, the resulting value
+		******************************************************************************/
+		Character& operator^=(Primitive &primitive);
+
+		/******************************************************************************
+			Function Name: operator<<=
+
+			Des:
+				Override shift left assignment operator
+
+			Params:
+				primitive - type Primitive &, the primitive type to be shifted left by
+
+			Returns:
+				type Character &, the resulting value
+		******************************************************************************/
+		Character& operator<<=(Primitive &primitive);
+
+		/******************************************************************************
+			Function Name: operator>>=
+
+			Des:
+				Override shift right assignment operator
+
+			Params:
+				primitive - type Primitive &, the primitive type to be shifted right by
+
+			Returns:
+				type Character &, the resulting value
+		******************************************************************************/
+		Character& operator>>=(Primitive &primitive);
 	};
 }

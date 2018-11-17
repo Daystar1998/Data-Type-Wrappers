@@ -64,7 +64,12 @@ namespace day {
 		return *this;
 	}
 
-	// Addition
+	string Character::toString() {
+
+		return to_string(data);
+	}
+
+		// Addition
 	Character Character::operator+(Primitive &primitive) {
 
 		Character result;

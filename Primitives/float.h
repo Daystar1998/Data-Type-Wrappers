@@ -15,44 +15,57 @@
 ******************************************************************************/
 
 /******************************************************************************
-	File Name: short.h
+	File Name: float.h
 
 	Author: Matthew Day
 
-	Class Name: Short
+	Class Name: Float
 
 	Description:
-		Wrapper class for short
+		Wrapper class for float
 ******************************************************************************/
 
 #pragma once
 
 #include "primitives.h"
 
+using std::to_string;
+
 namespace day {
 
-	class Short : public Primitive {
+	class Float : public Primitive {
 
 	private:
 
-		short data;
+		float data;
 
-		Short() : Primitive(Type::SHORT), data(0) {}
+		Float() : Primitive(Type::FLOAT), data(0) {}
 	public:
 
 		/******************************************************************************
 		Constructor
 		******************************************************************************/
-		Short(short data) : Primitive(Type::SHORT), data(data) {}
+		Float(float data) : Primitive(Type::FLOAT), data(data) {}
+
+		/******************************************************************************
+			Function Name: toString
+
+			Des:
+				Get the data as a string
+
+			Returns:
+				type string, data as a string
+		******************************************************************************/
+		string toString() override;
 
 		// Getter
-		inline short getShort() override {
+		inline float getFloat() override {
 
 			return data;
 		}
 
 		// Setter
-		inline void setShort(short data) override {
+		inline void setFloat(float data) override {
 
 			this->data = data;
 		}
@@ -72,9 +85,9 @@ namespace day {
 					assigned to
 
 			Returns:
-				type Short &, the resulting value
+				type Float &, the resulting value
 		******************************************************************************/
-		Short& operator=(Primitive &primitive);
+		Float& operator=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator+
@@ -86,9 +99,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be added to
 
 			Returns:
-				type Short, the resulting value
+				type Float, the resulting value
 		******************************************************************************/
-		Short operator+(Primitive &primitive);
+		Float operator+(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator-
@@ -100,9 +113,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be subtracted by
 
 			Returns:
-				type Short, the resulting value
+				type Float, the resulting value
 		******************************************************************************/
-		Short operator-(Primitive &primitive);
+		Float operator-(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator*
@@ -114,9 +127,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be multiplied by
 
 			Returns:
-				type Short &, the resulting value
+				type Float &, the resulting value
 		******************************************************************************/
-		Short operator*(Primitive &primitive);
+		Float operator*(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator/
@@ -128,23 +141,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be divided by
 
 			Returns:
-				type Short, the resulting value
+				type Float, the resulting value
 		******************************************************************************/
-		Short operator/(Primitive &primitive);
-
-		/******************************************************************************
-			Function Name: operator%
-
-			Des:
-				Override modulation operator
-
-			Params:
-				primitive - type Primitive &, the primitive type to be modulated by
-
-			Returns:
-				type Short, the resulting value
-		******************************************************************************/
-		Short operator%(Primitive &primitive);
+		Float operator/(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator++
@@ -153,9 +152,9 @@ namespace day {
 				Override prefix increment operator
 
 			Returns:
-				type Short &, the resulting value
+				type Float &, the resulting value
 		******************************************************************************/
-		Short& operator++();
+		Float& operator++();
 
 		/******************************************************************************
 			Function Name: operator++
@@ -164,9 +163,9 @@ namespace day {
 				Override postfix increment operator
 
 			Returns:
-				type Short, the resulting value
+				type Float, the resulting value
 		******************************************************************************/
-		Short operator++(int);
+		Float operator++(int);
 
 		/******************************************************************************
 			Function Name: operator--
@@ -175,9 +174,9 @@ namespace day {
 				Override prefix decrement operator
 
 			Returns:
-				type Short &, the resulting value
+				type Float &, the resulting value
 		******************************************************************************/
-		Short& operator--();
+		Float& operator--();
 
 		/******************************************************************************
 			Function Name: operator--
@@ -186,94 +185,9 @@ namespace day {
 				Override postfix decrement operator
 
 			Returns:
-				type Short, the resulting value
+				type Float, the resulting value
 		******************************************************************************/
-		Short operator--(int);
-
-		/******************************************************************************
-			Bitwise operators
-		******************************************************************************/
-
-		/******************************************************************************
-			Function Name: operator|
-
-			Des:
-				Override bitwise OR operator
-
-			Params:
-				primitive - type Primitive &, the primitive type to be bitwise OR'd by
-
-			Returns:
-				type Short, the resulting value
-		******************************************************************************/
-		Short operator|(Primitive &primitive);
-
-		/******************************************************************************
-			Function Name: operator&
-
-			Des:
-				Override bitwise AND operator
-
-			Params:
-				primitive - type Primitive &, the primitive type to be bitwise AND'd by
-
-			Returns:
-				type Short, the resulting value
-		******************************************************************************/
-		Short operator&(Primitive &primitive);
-
-		/******************************************************************************
-			Function Name: operator~
-
-			Des:
-				Override bitwise NOT operator
-
-			Returns:
-				type Short, the resulting value
-		******************************************************************************/
-		Short operator~();
-
-		/******************************************************************************
-			Function Name: operator^
-
-			Des:
-				Override bitwise XOR operator
-
-			Params:
-				primitive - type Primitive &, the primitive type to be bitwise XOR'd by
-
-			Returns:
-				type Short, the resulting value
-		******************************************************************************/
-		Short operator^(Primitive &primitive);
-
-		/******************************************************************************
-			Function Name: operator<<
-
-			Des:
-				Override left shift operator
-
-			Params:
-				primitive - type Primitive &, the primitive type to be shifted by
-
-			Returns:
-				type Short, the resulting value
-		******************************************************************************/
-		Short operator<<(Primitive &primitive);
-
-		/******************************************************************************
-			Function Name: operator>>
-
-			Des:
-				Override right shift operator
-
-			Params:
-				primitive - type Primitive &, the primitive type to be shifted by
-
-			Returns:
-				type Short, the resulting value
-		******************************************************************************/
-		Short operator>>(Primitive &primitive);
+		Float operator--(int);
 
 		/******************************************************************************
 			Comparison operators
@@ -377,9 +291,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be added to
 
 			Returns:
-				type Short &, the resulting value
+				type Float &, the resulting value
 		******************************************************************************/
-		Short& operator+=(Primitive &primitive);
+		Float& operator+=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator-=
@@ -391,9 +305,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be subtracted by
 
 			Returns:
-				type Short &, the resulting value
+				type Float &, the resulting value
 		******************************************************************************/
-		Short& operator-=(Primitive &primitive);
+		Float& operator-=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator*=
@@ -405,9 +319,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be multiplied by
 
 			Returns:
-				type Short &, the resulting value
+				type Float &, the resulting value
 		******************************************************************************/
-		Short& operator*=(Primitive &primitive);
+		Float& operator*=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator/=
@@ -419,92 +333,8 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be divided by
 
 			Returns:
-				type Short &, the resulting value
+				type Float &, the resulting value
 		******************************************************************************/
-		Short& operator/=(Primitive &primitive);
-
-		/******************************************************************************
-			Function Name: operator%=
-
-			Des:
-				Override modulation assignment operator
-
-			Params:
-				primitive - type Primitive &, the primitive type to be modulated by
-
-			Returns:
-				type Short &, the resulting value
-		******************************************************************************/
-		Short& operator%=(Primitive &primitive);
-
-		/******************************************************************************
-			Function Name: operator&=
-
-			Des:
-				Override bitwise AND assignment operator
-
-			Params:
-				primitive - type Primitive &, the primitive type to be AND'd by
-
-			Returns:
-				type Short &, the resulting value
-		******************************************************************************/
-		Short& operator&=(Primitive &primitive);
-
-		/******************************************************************************
-			Function Name: operator|=
-
-			Des:
-				Override bitwise OR assignment operator
-
-			Params:
-				primitive - type Primitive &, the primitive type to be OR'd by
-
-			Returns:
-				type Short &, the resulting value
-		******************************************************************************/
-		Short& operator|=(Primitive &primitive);
-
-		/******************************************************************************
-			Function Name: operator^=
-
-			Des:
-				Override bitwise XOR assignment operator
-
-			Params:
-				primitive - type Primitive &, the primitive type to be XOR'd by
-
-			Returns:
-				type Short &, the resulting value
-		******************************************************************************/
-		Short& operator^=(Primitive &primitive);
-
-		/******************************************************************************
-			Function Name: operator<<=
-
-			Des:
-				Override shift left assignment operator
-
-			Params:
-				primitive - type Primitive &, the primitive type to be shifted left by
-
-			Returns:
-				type Short &, the resulting value
-		******************************************************************************/
-		Short& operator<<=(Primitive &primitive);
-
-		/******************************************************************************
-			Function Name: operator>>=
-
-			Des:
-				Override shift right assignment operator
-
-			Params:
-				primitive - type Primitive &, the primitive type to be shifted right by
-
-			Returns:
-				type Short &, the resulting value
-		******************************************************************************/
-		Short& operator>>=(Primitive &primitive);
+		Float& operator/=(Primitive &primitive);
 	};
 }

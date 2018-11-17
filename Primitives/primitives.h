@@ -29,8 +29,10 @@
 #pragma once
 
 #include <iostream>
+#include <string>
 
 using std::exception;
+using std::string;
 
 namespace day {
 
@@ -51,6 +53,19 @@ namespace day {
 
 	public:
 
+		inline Type getType();
+
+		/******************************************************************************
+			Function Name: toString
+			
+			Des:
+				Get the value of the class as a string
+				
+			Returns:
+				type string, the value as a string
+		******************************************************************************/
+		virtual string toString() { throw new exception("ToString has not been written yet"); };
+
 		// Default getters
 		virtual char getChar() { throw new exception("Char is not available for this type"); }
 		virtual short getShort() { throw new exception("Char is not available for this type"); }
@@ -68,7 +83,5 @@ namespace day {
 		virtual void setFloat(float data) { throw new exception("Float is not available for this type"); }
 		virtual void setDouble(double data) { throw new exception("Double is not available for this type"); }
 		virtual void setBool(bool data) { throw new exception("Bool is not available for this type"); }
-
-		inline Type getType();
 	};
 }

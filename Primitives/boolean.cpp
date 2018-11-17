@@ -27,6 +27,22 @@
 
 namespace day {
 
+	// Assignment
+	Boolean& Boolean::operator=(Primitive &primitive) {
+
+		if (primitive.getType() == BOOLEAN)
+			this->setBool(primitive.getBool());
+		else
+			throw new exception("Unsupported operation");
+
+		return *this;
+	}
+
+	string Boolean::toString() {
+
+		return to_string(data);
+	}
+
 	// Logical NOT
 	Boolean Boolean::operator!() {
 

@@ -29,6 +29,8 @@
 
 #include "primitives.h"
 
+using std::to_string;
+
 namespace day {
 
 	class Boolean : public Primitive {
@@ -45,6 +47,17 @@ namespace day {
 		******************************************************************************/
 		Boolean(bool data) : Primitive(Type::BOOLEAN), data(data) {}
 
+		/******************************************************************************
+			Function Name: toString
+
+			Des:
+				Get the data as a string
+
+			Returns:
+				type string, data as a string
+		******************************************************************************/
+		string toString() override;
+
 		// Getter
 		inline bool getBool() override {
 
@@ -60,6 +73,21 @@ namespace day {
 		/******************************************************************************
 		Logic Operators
 		******************************************************************************/
+
+		/******************************************************************************
+			Function Name: operator=
+
+			Des:
+				Override assignment operator
+
+			Params:
+				primitive - type Primitive &, the primitive type this is to be
+					assigned to
+
+			Returns:
+				type Boolean &, the resulting value
+		******************************************************************************/
+		Boolean& operator=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator!

@@ -29,6 +29,8 @@
 
 #include "primitives.h"
 
+using std::to_string;
+
 namespace day {
 
 	class Integer : public Primitive {
@@ -44,6 +46,17 @@ namespace day {
 		Constructor
 		******************************************************************************/
 		Integer(int data) : Primitive(Type::INTEGER), data(data) {}
+
+		/******************************************************************************
+			Function Name: toString
+
+			Des:
+				Get the data as a string
+
+			Returns:
+				type string, data as a string
+		******************************************************************************/
+		string toString() override;
 
 		// Getter
 		inline int getInt() override {

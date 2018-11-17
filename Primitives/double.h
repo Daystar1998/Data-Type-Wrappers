@@ -15,44 +15,57 @@
 ******************************************************************************/
 
 /******************************************************************************
-	File Name: float.h
+	File Name: double.h
 
 	Author: Matthew Day
 
-	Class Name: Float
+	Class Name: Double
 
 	Description:
-		Wrapper class for float
+		Wrapper class for double
 ******************************************************************************/
 
 #pragma once
 
 #include "primitives.h"
 
+using std::to_string;
+
 namespace day {
 
-	class Float : public Primitive {
+	class Double : public Primitive {
 
 	private:
 
-		float data;
+		double data;
 
-		Float() : Primitive(Type::FLOAT), data(0) {}
+		Double() : Primitive(Type::DOUBLE), data(0) {}
 	public:
 
 		/******************************************************************************
 		Constructor
 		******************************************************************************/
-		Float(float data) : Primitive(Type::FLOAT), data(data) {}
+		Double(double data) : Primitive(Type::DOUBLE), data(data) {}
+
+		/******************************************************************************
+			Function Name: toString
+
+			Des:
+				Get the data as a string
+
+			Returns:
+				type string, data as a string
+		******************************************************************************/
+		string toString() override;
 
 		// Getter
-		inline float getFloat() override {
+		inline double getDouble() override {
 
 			return data;
 		}
 
 		// Setter
-		inline void setFloat(float data) override {
+		inline void setDouble(double data) override {
 
 			this->data = data;
 		}
@@ -72,9 +85,9 @@ namespace day {
 					assigned to
 
 			Returns:
-				type Float &, the resulting value
+				type Double &, the resulting value
 		******************************************************************************/
-		Float& operator=(Primitive &primitive);
+		Double& operator=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator+
@@ -86,9 +99,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be added to
 
 			Returns:
-				type Float, the resulting value
+				type Double, the resulting value
 		******************************************************************************/
-		Float operator+(Primitive &primitive);
+		Double operator+(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator-
@@ -100,9 +113,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be subtracted by
 
 			Returns:
-				type Float, the resulting value
+				type Double, the resulting value
 		******************************************************************************/
-		Float operator-(Primitive &primitive);
+		Double operator-(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator*
@@ -114,9 +127,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be multiplied by
 
 			Returns:
-				type Float &, the resulting value
+				type Double &, the resulting value
 		******************************************************************************/
-		Float operator*(Primitive &primitive);
+		Double operator*(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator/
@@ -128,9 +141,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be divided by
 
 			Returns:
-				type Float, the resulting value
+				type Double, the resulting value
 		******************************************************************************/
-		Float operator/(Primitive &primitive);
+		Double operator/(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator++
@@ -139,9 +152,9 @@ namespace day {
 				Override prefix increment operator
 
 			Returns:
-				type Float &, the resulting value
+				type Double &, the resulting value
 		******************************************************************************/
-		Float& operator++();
+		Double& operator++();
 
 		/******************************************************************************
 			Function Name: operator++
@@ -150,9 +163,9 @@ namespace day {
 				Override postfix increment operator
 
 			Returns:
-				type Float, the resulting value
+				type Double, the resulting value
 		******************************************************************************/
-		Float operator++(int);
+		Double operator++(int);
 
 		/******************************************************************************
 			Function Name: operator--
@@ -161,9 +174,9 @@ namespace day {
 				Override prefix decrement operator
 
 			Returns:
-				type Float &, the resulting value
+				type Double &, the resulting value
 		******************************************************************************/
-		Float& operator--();
+		Double& operator--();
 
 		/******************************************************************************
 			Function Name: operator--
@@ -172,9 +185,9 @@ namespace day {
 				Override postfix decrement operator
 
 			Returns:
-				type Float, the resulting value
+				type Double, the resulting value
 		******************************************************************************/
-		Float operator--(int);
+		Double operator--(int);
 
 		/******************************************************************************
 			Comparison operators
@@ -278,9 +291,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be added to
 
 			Returns:
-				type Float &, the resulting value
+				type Double &, the resulting value
 		******************************************************************************/
-		Float& operator+=(Primitive &primitive);
+		Double& operator+=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator-=
@@ -292,9 +305,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be subtracted by
 
 			Returns:
-				type Float &, the resulting value
+				type Double &, the resulting value
 		******************************************************************************/
-		Float& operator-=(Primitive &primitive);
+		Double& operator-=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator*=
@@ -306,9 +319,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be multiplied by
 
 			Returns:
-				type Float &, the resulting value
+				type Double &, the resulting value
 		******************************************************************************/
-		Float& operator*=(Primitive &primitive);
+		Double& operator*=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator/=
@@ -320,8 +333,8 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be divided by
 
 			Returns:
-				type Float &, the resulting value
+				type Double &, the resulting value
 		******************************************************************************/
-		Float& operator/=(Primitive &primitive);
+		Double& operator/=(Primitive &primitive);
 	};
 }
