@@ -34,8 +34,6 @@
 using std::exception;
 using std::string;
 using std::to_string;
-using std::unique_ptr;
-using std::make_unique;
 
 namespace day {
 

@@ -236,7 +236,7 @@ namespace day {
 	// Postfix incrementation
 	Primitive Float::operator++(int) {
 
-		unique_ptr<Float> result = make_unique<Float>(this->getFloat());
+		Float result(this->getFloat());
 		++*this;
 
 		return result;
@@ -253,7 +253,7 @@ namespace day {
 	// Postfix decrementation
 	Primitive Float::operator--(int) {
 
-		unique_ptr<Float> result = make_unique<Float>(this->getFloat());
+		Float result(this->getFloat());
 		--*this;
 
 		return result;
