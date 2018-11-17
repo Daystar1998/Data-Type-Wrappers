@@ -15,20 +15,49 @@
 ******************************************************************************/
 
 /******************************************************************************
-	File Name: Primitive.cpp
+	File Name: boolean.cpp
 
 	Author: Matthew Day
 
 	Description:
-		Implementation file for Primitive.h
+		Implementation file for boolean.h
 ******************************************************************************/
 
-#include "primitives.h"
+#include "boolean.h"
 
 namespace day {
 
-	Primitive::Type Primitive::getType() {
+	// Logical NOT
+	Boolean Boolean::operator!() {
 
-		return Primitive::TYPE;
+		Boolean result(!this->getBool());
+
+		return result;
+	}
+
+	// Logical AND
+	Boolean Boolean::operator&&(Primitive &primitive) {
+
+		Boolean result;
+
+		if (primitive.getType() == BOOLEAN)
+			result.setBool(this->getBool() && primitive.getBool());
+		else
+			throw new exception("Unsupported operation");
+
+		return result;
+	}
+
+	// Logical OR
+	Boolean Boolean::operator||(Primitive &primitive) {
+
+		Boolean result;
+
+		if (primitive.getType() == BOOLEAN)
+			result.setBool(this->getBool() || primitive.getBool());
+		else
+			throw new exception("Unsupported operation");
+
+		return result;
 	}
 }
