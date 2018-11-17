@@ -73,27 +73,27 @@ namespace day {
 
 			case CHAR:
 
-				result.setInt(this->getLong() + primitive.getChar());
+				result.setLong(this->getLong() + primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setInt(this->getLong() + primitive.getShort());
+				result.setLong(this->getLong() + primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setInt(this->getLong() + primitive.getInt());
+				result.setLong(this->getLong() + primitive.getInt());
 				break;
 			case LONG:
 
-				result.setInt(this->getLong() + primitive.getLong());
+				result.setLong(this->getLong() + primitive.getLong());
 				break;
 			case FLOAT:
 
-				result.setInt(this->getLong() + primitive.getFloat());
+				result.setLong(this->getLong() + primitive.getFloat());
 				break;
 			case DOUBLE:
 
-				result.setInt(this->getLong() + primitive.getDouble());
+				result.setLong(this->getLong() + primitive.getDouble());
 				break;
 			default:
 
@@ -112,27 +112,27 @@ namespace day {
 
 			case CHAR:
 
-				result.setInt(this->getLong() - primitive.getChar());
+				result.setLong(this->getLong() - primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setInt(this->getLong() - primitive.getShort());
+				result.setLong(this->getLong() - primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setInt(this->getLong() - primitive.getInt());
+				result.setLong(this->getLong() - primitive.getInt());
 				break;
 			case LONG:
 
-				result.setInt(this->getLong() - primitive.getLong());
+				result.setLong(this->getLong() - primitive.getLong());
 				break;
 			case FLOAT:
 
-				result.setInt(this->getLong() - primitive.getFloat());
+				result.setLong(this->getLong() - primitive.getFloat());
 				break;
 			case DOUBLE:
 
-				result.setInt(this->getLong() - primitive.getDouble());
+				result.setLong(this->getLong() - primitive.getDouble());
 				break;
 			default:
 
@@ -151,27 +151,27 @@ namespace day {
 
 			case CHAR:
 
-				result.setInt(this->getLong() * primitive.getChar());
+				result.setLong(this->getLong() * primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setInt(this->getLong() * primitive.getShort());
+				result.setLong(this->getLong() * primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setInt(this->getLong() * primitive.getInt());
+				result.setLong(this->getLong() * primitive.getInt());
 				break;
 			case LONG:
 
-				result.setInt(this->getLong() * primitive.getLong());
+				result.setLong(this->getLong() * primitive.getLong());
 				break;
 			case FLOAT:
 
-				result.setInt(this->getLong() * primitive.getFloat());
+				result.setLong(this->getLong() * primitive.getFloat());
 				break;
 			case DOUBLE:
 
-				result.setInt(this->getLong() * primitive.getDouble());
+				result.setLong(this->getLong() * primitive.getDouble());
 				break;
 			default:
 
@@ -190,27 +190,27 @@ namespace day {
 
 			case CHAR:
 
-				result.setInt(this->getLong() / primitive.getChar());
+				result.setLong(this->getLong() / primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setInt(this->getLong() / primitive.getShort());
+				result.setLong(this->getLong() / primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setInt(this->getLong() / primitive.getInt());
+				result.setLong(this->getLong() / primitive.getInt());
 				break;
 			case LONG:
 
-				result.setInt(this->getLong() / primitive.getLong());
+				result.setLong(this->getLong() / primitive.getLong());
 				break;
 			case FLOAT:
 
-				result.setInt(this->getLong() / primitive.getFloat());
+				result.setLong(this->getLong() / primitive.getFloat());
 				break;
 			case DOUBLE:
 
-				result.setInt(this->getLong() / primitive.getDouble());
+				result.setLong(this->getLong() / primitive.getDouble());
 				break;
 			default:
 
@@ -229,27 +229,27 @@ namespace day {
 
 			case CHAR:
 
-				result.setInt(this->getLong() % primitive.getChar());
+				result.setLong(this->getLong() % primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setInt(this->getLong() % primitive.getShort());
+				result.setLong(this->getLong() % primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setInt(this->getLong() % primitive.getInt());
+				result.setLong(this->getLong() % primitive.getInt());
 				break;
 			case LONG:
 
-				result.setInt(this->getLong() % primitive.getLong());
+				result.setLong(this->getLong() % primitive.getLong());
 				break;
 			case FLOAT:
 				// TODO: Decide whether on not to remove this
-				result.setInt(this->getLong() % (int)primitive.getFloat());
+				result.setLong(this->getLong() % (int)primitive.getFloat());
 				break;
 			case DOUBLE:
 
-				result.setInt(this->getLong() % (int)primitive.getDouble());
+				result.setLong(this->getLong() % (int)primitive.getDouble());
 				break;
 			default:
 
@@ -302,19 +302,19 @@ namespace day {
 
 			case CHAR:
 
-				result.setInt(this->getLong() | primitive.getChar());
+				result.setLong(this->getLong() | primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setInt(this->getLong() | primitive.getShort());
+				result.setLong(this->getLong() | primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setInt(this->getLong() | primitive.getInt());
+				result.setLong(this->getLong() | primitive.getInt());
 				break;
 			case LONG:
 
-				result.setInt(this->getLong() | primitive.getLong());
+				result.setLong(this->getLong() | primitive.getLong());
 				break;
 			default:
 
@@ -333,19 +333,19 @@ namespace day {
 
 			case CHAR:
 
-				result.setInt(this->getLong() & primitive.getChar());
+				result.setLong(this->getLong() & primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setInt(this->getLong() & primitive.getShort());
+				result.setLong(this->getLong() & primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setInt(this->getLong() & primitive.getInt());
+				result.setLong(this->getLong() & primitive.getInt());
 				break;
 			case LONG:
 
-				result.setInt(this->getLong() & primitive.getLong());
+				result.setLong(this->getLong() & primitive.getLong());
 				break;
 			default:
 
@@ -360,7 +360,7 @@ namespace day {
 
 		Long result;
 
-		result.setInt(~this->getLong());
+		result.setLong(~this->getLong());
 
 		return result;
 	}
@@ -374,19 +374,19 @@ namespace day {
 
 			case CHAR:
 
-				result.setInt(this->getLong() ^ primitive.getChar());
+				result.setLong(this->getLong() ^ primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setInt(this->getLong() ^ primitive.getShort());
+				result.setLong(this->getLong() ^ primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setInt(this->getLong() ^ primitive.getInt());
+				result.setLong(this->getLong() ^ primitive.getInt());
 				break;
 			case LONG:
 
-				result.setInt(this->getLong() ^ primitive.getLong());
+				result.setLong(this->getLong() ^ primitive.getLong());
 				break;
 			default:
 
@@ -405,19 +405,19 @@ namespace day {
 
 			case CHAR:
 
-				result.setInt(this->getLong() << primitive.getChar());
+				result.setLong(this->getLong() << primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setInt(this->getLong() << primitive.getShort());
+				result.setLong(this->getLong() << primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setInt(this->getLong() << primitive.getInt());
+				result.setLong(this->getLong() << primitive.getInt());
 				break;
 			case LONG:
 
-				result.setInt(this->getLong() << primitive.getLong());
+				result.setLong(this->getLong() << primitive.getLong());
 				break;
 			default:
 
@@ -436,19 +436,19 @@ namespace day {
 
 			case CHAR:
 
-				result.setInt(this->getLong() >> primitive.getChar());
+				result.setLong(this->getLong() >> primitive.getChar());
 				break;
 			case SHORT:
 
-				result.setInt(this->getLong() >> primitive.getShort());
+				result.setLong(this->getLong() >> primitive.getShort());
 				break;
 			case INTEGER:
 
-				result.setInt(this->getLong() >> primitive.getInt());
+				result.setLong(this->getLong() >> primitive.getInt());
 				break;
 			case LONG:
 
-				result.setInt(this->getLong() >> primitive.getLong());
+				result.setLong(this->getLong() >> primitive.getLong());
 				break;
 			default:
 
