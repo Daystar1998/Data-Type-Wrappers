@@ -37,7 +37,7 @@ namespace day {
 
 		int data;
 
-		Integer() : Primitive(Type::INTEGER) {}
+		Integer() : Primitive(Type::INTEGER), data(0) {}
 	public:
 
 		/******************************************************************************

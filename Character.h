@@ -35,15 +35,15 @@ namespace day {
 
 	private:
 
-		int data;
+		char data;
 
-		Character() : Primitive(Type::CHAR) {}
+		Character() : Primitive(Type::CHAR), data(0) {}
 	public:
 
 		/******************************************************************************
 		Constructor
 		******************************************************************************/
-		Character(int data) : Primitive(Type::CHAR), data(data) {}
+		Character(char data) : Primitive(Type::CHAR), data(data) {}
 
 		// Getter
 		inline char getChar() override {

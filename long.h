@@ -15,14 +15,14 @@
 ******************************************************************************/
 
 /******************************************************************************
-	File Name: short.h
+	File Name: long.h
 
 	Author: Matthew Day
 
-	Class Name: Short
+	Class Name: Long
 
 	Description:
-		Wrapper class for short
+		Wrapper class for long
 ******************************************************************************/
 
 #pragma once
@@ -31,28 +31,28 @@
 
 namespace day {
 
-	class Short : public Primitive {
+	class Long : public Primitive {
 
 	private:
 
-		short data;
+		long data;
 
-		Short() : Primitive(Type::SHORT), data(0) {}
+		Long() : Primitive(Type::LONG), data(0) {}
 	public:
 
 		/******************************************************************************
 		Constructor
 		******************************************************************************/
-		Short(short data) : Primitive(Type::SHORT), data(data) {}
+		Long(long data) : Primitive(Type::LONG), data(data) {}
 
 		// Getter
-		inline short getShort() override {
+		inline long getLong() override {
 
 			return data;
 		}
 
 		// Setter
-		inline void setShort(short data) override {
+		inline void setLong(long data) override {
 
 			this->data = data;
 		}
@@ -72,9 +72,9 @@ namespace day {
 					assigned to
 
 			Returns:
-				type Short &, the resulting value
+				type Long &, the resulting value
 		******************************************************************************/
-		Short& operator=(Primitive &primitive);
+		Long& operator=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator+
@@ -86,9 +86,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be added to
 
 			Returns:
-				type Short, the resulting value
+				type Long, the resulting value
 		******************************************************************************/
-		Short operator+(Primitive &primitive);
+		Long operator+(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator-
@@ -100,9 +100,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be subtracted by
 
 			Returns:
-				type Short, the resulting value
+				type Long, the resulting value
 		******************************************************************************/
-		Short operator-(Primitive &primitive);
+		Long operator-(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator*
@@ -114,9 +114,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be multiplied by
 
 			Returns:
-				type Short &, the resulting value
+				type Long &, the resulting value
 		******************************************************************************/
-		Short operator*(Primitive &primitive);
+		Long operator*(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator/
@@ -128,9 +128,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be divided by
 
 			Returns:
-				type Short, the resulting value
+				type Long, the resulting value
 		******************************************************************************/
-		Short operator/(Primitive &primitive);
+		Long operator/(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator%
@@ -142,9 +142,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be modulated by
 
 			Returns:
-				type Short, the resulting value
+				type Long, the resulting value
 		******************************************************************************/
-		Short operator%(Primitive &primitive);
+		Long operator%(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator++
@@ -153,9 +153,9 @@ namespace day {
 				Override prefix increment operator
 
 			Returns:
-				type Short &, the resulting value
+				type Long &, the resulting value
 		******************************************************************************/
-		Short& operator++();
+		Long& operator++();
 
 		/******************************************************************************
 			Function Name: operator++
@@ -164,9 +164,9 @@ namespace day {
 				Override postfix increment operator
 
 			Returns:
-				type Short, the resulting value
+				type Long, the resulting value
 		******************************************************************************/
-		Short operator++(int);
+		Long operator++(int);
 
 		/******************************************************************************
 			Function Name: operator--
@@ -175,9 +175,9 @@ namespace day {
 				Override prefix decrement operator
 
 			Returns:
-				type Short &, the resulting value
+				type Long &, the resulting value
 		******************************************************************************/
-		Short& operator--();
+		Long& operator--();
 
 		/******************************************************************************
 			Function Name: operator--
@@ -186,9 +186,9 @@ namespace day {
 				Override postfix decrement operator
 
 			Returns:
-				type Short, the resulting value
+				type Long, the resulting value
 		******************************************************************************/
-		Short operator--(int);
+		Long operator--(int);
 
 		/******************************************************************************
 			Bitwise operators
@@ -204,9 +204,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be bitwise OR'd by
 
 			Returns:
-				type Short, the resulting value
+				type Long, the resulting value
 		******************************************************************************/
-		Short operator|(Primitive &primitive);
+		Long operator|(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator&
@@ -218,9 +218,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be bitwise AND'd by
 
 			Returns:
-				type Short, the resulting value
+				type Long, the resulting value
 		******************************************************************************/
-		Short operator&(Primitive &primitive);
+		Long operator&(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator~
@@ -229,9 +229,9 @@ namespace day {
 				Override bitwise NOT operator
 
 			Returns:
-				type Short, the resulting value
+				type Long, the resulting value
 		******************************************************************************/
-		Short operator~();
+		Long operator~();
 
 		/******************************************************************************
 			Function Name: operator^
@@ -243,9 +243,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be bitwise XOR'd by
 
 			Returns:
-				type Short, the resulting value
+				type Long, the resulting value
 		******************************************************************************/
-		Short operator^(Primitive &primitive);
+		Long operator^(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator<<
@@ -257,9 +257,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be shifted by
 
 			Returns:
-				type Short, the resulting value
+				type Long, the resulting value
 		******************************************************************************/
-		Short operator<<(Primitive &primitive);
+		Long operator<<(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator>>
@@ -271,9 +271,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be shifted by
 
 			Returns:
-				type Short, the resulting value
+				type Long, the resulting value
 		******************************************************************************/
-		Short operator>>(Primitive &primitive);
+		Long operator>>(Primitive &primitive);
 
 		/******************************************************************************
 			Comparison operators
@@ -377,9 +377,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be added to
 
 			Returns:
-				type Short &, the resulting value
+				type Long &, the resulting value
 		******************************************************************************/
-		Short& operator+=(Primitive &primitive);
+		Long& operator+=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator-=
@@ -391,9 +391,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be subtracted by
 
 			Returns:
-				type Short &, the resulting value
+				type Long &, the resulting value
 		******************************************************************************/
-		Short& operator-=(Primitive &primitive);
+		Long& operator-=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator*=
@@ -405,9 +405,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be multiplied by
 
 			Returns:
-				type Short &, the resulting value
+				type Long &, the resulting value
 		******************************************************************************/
-		Short& operator*=(Primitive &primitive);
+		Long& operator*=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator/=
@@ -419,9 +419,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be divided by
 
 			Returns:
-				type Short &, the resulting value
+				type Long &, the resulting value
 		******************************************************************************/
-		Short& operator/=(Primitive &primitive);
+		Long& operator/=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator%=
@@ -433,9 +433,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be modulated by
 
 			Returns:
-				type Short &, the resulting value
+				type Long &, the resulting value
 		******************************************************************************/
-		Short& operator%=(Primitive &primitive);
+		Long& operator%=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator&=
@@ -447,9 +447,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be AND'd by
 
 			Returns:
-				type Short &, the resulting value
+				type Long &, the resulting value
 		******************************************************************************/
-		Short& operator&=(Primitive &primitive);
+		Long& operator&=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator|=
@@ -461,9 +461,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be OR'd by
 
 			Returns:
-				type Short &, the resulting value
+				type Long &, the resulting value
 		******************************************************************************/
-		Short& operator|=(Primitive &primitive);
+		Long& operator|=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator^=
@@ -475,9 +475,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be XOR'd by
 
 			Returns:
-				type Short &, the resulting value
+				type Long &, the resulting value
 		******************************************************************************/
-		Short& operator^=(Primitive &primitive);
+		Long& operator^=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator<<=
@@ -489,9 +489,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be shifted left by
 
 			Returns:
-				type Short &, the resulting value
+				type Long &, the resulting value
 		******************************************************************************/
-		Short& operator<<=(Primitive &primitive);
+		Long& operator<<=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator>>=
@@ -503,8 +503,8 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be shifted right by
 
 			Returns:
-				type Short &, the resulting value
+				type Long &, the resulting value
 		******************************************************************************/
-		Short& operator>>=(Primitive &primitive);
+		Long& operator>>=(Primitive &primitive);
 	};
 }

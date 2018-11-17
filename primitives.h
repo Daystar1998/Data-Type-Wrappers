@@ -73,27 +73,6 @@ namespace day {
 	};
 
 	/******************************************************************************
-		Class Name: Long
-
-		Description:
-			Wrapper class for longs
-	******************************************************************************/
-	class Long : public Primitive {
-
-	private:
-
-		long data;
-	public:
-
-		/******************************************************************************
-		Constructor
-		******************************************************************************/
-		Long(long data) : Primitive(Type::LONG), data(data) {}
-
-		inline long getLong() override;
-	};
-
-	/******************************************************************************
 		Class Name: Float
 
 		Description:
