@@ -707,7 +707,7 @@ namespace day {
 	// Addition assignment
 	Character& Character::operator+=(Primitive &primitive) {
 
-		*this = (Primitive)(*this + primitive);
+		*this = (Primitive&)(*this + primitive);
 
 		return *this;
 	}
@@ -715,7 +715,7 @@ namespace day {
 	// Subtraction assignment
 	Character& Character::operator-=(Primitive &primitive) {
 
-		*this = (Primitive)(*this - primitive);
+		*this = (Primitive&)(*this - primitive);
 
 		return *this;
 	}
@@ -723,7 +723,7 @@ namespace day {
 	// Multiplication assignment
 	Character& Character::operator*=(Primitive &primitive) {
 
-		*this = (Primitive)(*this * primitive);
+		*this = (Primitive&)(*this * primitive);
 
 		return *this;
 	}
@@ -731,7 +731,7 @@ namespace day {
 	// Division assignment
 	Character& Character::operator/=(Primitive &primitive) {
 
-		*this = (Primitive)(*this / primitive);
+		*this = (Primitive&)(*this / primitive);
 
 		return *this;
 	}
@@ -739,7 +739,7 @@ namespace day {
 	// Modulation assignment
 	Character& Character::operator%=(Primitive &primitive) {
 
-		*this = (Primitive)(*this % primitive);
+		*this = (Primitive&)(*this % primitive);
 
 		return *this;
 	}
@@ -747,7 +747,7 @@ namespace day {
 	// Addition assignment
 	Character& Character::operator+=(Primitive &primitive) {
 
-		*this = (Primitive)(*this + primitive);
+		*this = (Primitive&)(*this + primitive);
 
 		return *this;
 	}
@@ -755,7 +755,7 @@ namespace day {
 	// Bitwise AND assignment
 	Character& Character::operator&=(Primitive &primitive) {
 
-		*this = (Primitive)(*this & primitive);
+		*this = (Primitive&)(*this & primitive);
 
 		return *this;
 	}
@@ -763,7 +763,7 @@ namespace day {
 	// Bitwise OR assignment
 	Character& Character::operator|=(Primitive &primitive) {
 
-		*this = (Primitive)(*this | primitive);
+		*this = (Primitive&)(*this | primitive);
 
 		return *this;
 	}
@@ -771,7 +771,7 @@ namespace day {
 	// Bitwise XOR assignment
 	Character& Character::operator^=(Primitive &primitive) {
 
-		*this = (Primitive)(*this ^ primitive);
+		*this = (Primitive&)(*this ^ primitive);
 
 		return *this;
 	}
@@ -779,7 +779,7 @@ namespace day {
 	// Shift left assignment
 	Character& Character::operator<<=(Primitive &primitive) {
 
-		*this = (Primitive)(*this << primitive);
+		*this = (Primitive&)(*this << primitive);
 
 		return *this;
 	}
@@ -787,7 +787,7 @@ namespace day {
 	// Shift right assignment
 	Character& Character::operator>>=(Primitive &primitive) {
 
-		*this = (Primitive)(*this >> primitive);
+		*this = (Primitive&)(*this >> primitive);
 
 		return *this;
 	}
