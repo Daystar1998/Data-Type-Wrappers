@@ -32,16 +32,6 @@ namespace day {
 		return Primitive::TYPE;
 	}
 
-	char Character::getChar() {
-
-		return data;
-	}
-
-	int Integer::getInt() {
-
-		return data;
-	}
-
 	long Long::getLong() {
 
 		return data;

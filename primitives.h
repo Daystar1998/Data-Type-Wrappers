@@ -73,48 +73,6 @@ namespace day {
 	};
 
 	/******************************************************************************
-		Class Name: Character
-
-		Description:
-			Wrapper class for chars
-	******************************************************************************/
-	class Character : public Primitive {
-
-	private:
-
-		char data;
-	public:
-
-		/******************************************************************************
-		Constructor
-		******************************************************************************/
-		Character(char data) : Primitive(Type::CHAR), data(data) {}
-
-		inline char getChar() override;
-	};
-
-	/******************************************************************************
-		Class Name: Integer
-
-		Description:
-			Wrapper class for ints
-	******************************************************************************/
-	class Integer : public Primitive {
-
-	private:
-
-		int data;
-	public:
-
-		/******************************************************************************
-		Constructor
-		******************************************************************************/
-		Integer(int data) : Primitive(Type::INTEGER), data(data) {}
-
-		inline int getInt() override;
-	};
-
-	/******************************************************************************
 		Class Name: Long
 
 		Description:
