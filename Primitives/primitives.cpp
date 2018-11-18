@@ -112,32 +112,32 @@ namespace day {
 		throw new exception("Unsupported operation");
 	}
 
-	bool Primitive::operator==(Primitive &primitive) {
+	Boolean Primitive::operator==(Primitive &primitive) {
 
 		throw new exception("Unsupported operation");
 	}
 
-	bool Primitive::operator!=(Primitive &primitive) {
+	Boolean Primitive::operator!=(Primitive &primitive) {
 
 		throw new exception("Unsupported operation");
 	}
 
-	bool Primitive::operator>(Primitive &primitive) {
+	Boolean Primitive::operator>(Primitive &primitive) {
 
 		throw new exception("Unsupported operation");
 	}
 
-	bool Primitive::operator<(Primitive &primitive) {
+	Boolean Primitive::operator<(Primitive &primitive) {
 
 		throw new exception("Unsupported operation");
 	}
 
-	bool Primitive::operator>=(Primitive &primitive) {
+	Boolean Primitive::operator>=(Primitive &primitive) {
 
 		throw new exception("Unsupported operation");
 	}
 
-	bool Primitive::operator<=(Primitive &primitive) {
+	Boolean Primitive::operator<=(Primitive &primitive) {
 
 		throw new exception("Unsupported operation");
 	}

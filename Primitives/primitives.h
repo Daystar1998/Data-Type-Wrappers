@@ -31,6 +31,8 @@
 #include <iostream>
 #include <string>
 
+#include "boolean.h"
+
 using std::exception;
 using std::string;
 using std::to_string;
@@ -41,6 +43,7 @@ namespace day {
 
 	public:
 
+		// TODO: Find way to make this scale better, currently adding anything here requires updating affected overrides in EVERY child class
 		enum class Type {
 
 			VOID,
@@ -327,9 +330,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type bool, the resulting value
+				type Boolean, the resulting value
 		******************************************************************************/
-		virtual bool operator==(Primitive &primitive);
+		virtual Boolean operator==(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator!=
@@ -341,9 +344,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type bool, the resulting value
+				type Boolean, the resulting value
 		******************************************************************************/
-		virtual bool operator!=(Primitive &primitive);
+		virtual Boolean operator!=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator>
@@ -355,9 +358,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type bool, the resulting value
+				type Boolean, the resulting value
 		******************************************************************************/
-		virtual bool operator>(Primitive &primitive);
+		virtual Boolean operator>(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator<
@@ -369,9 +372,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type bool, the resulting value
+				type Boolean, the resulting value
 		******************************************************************************/
-		virtual bool operator<(Primitive &primitive);
+		virtual Boolean operator<(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator>=
@@ -383,9 +386,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type bool, the resulting value
+				type Boolean, the resulting value
 		******************************************************************************/
-		virtual bool operator>=(Primitive &primitive);
+		virtual Boolean operator>=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator<=
@@ -397,9 +400,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type bool, the resulting value
+				type Boolean, the resulting value
 		******************************************************************************/
-		virtual bool operator<=(Primitive &primitive);
+		virtual Boolean operator<=(Primitive &primitive);
 
 		/******************************************************************************
 			Compound assignment operators

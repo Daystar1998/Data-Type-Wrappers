@@ -260,37 +260,37 @@ namespace day {
 	}
 
 	// Equals
-	bool Double::operator==(Primitive &primitive) {
+	Boolean Double::operator==(Primitive &primitive) {
 
-		bool result;
+		Boolean result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result = this->getDouble() == primitive.getChar();
+				result.setBool(this->getDouble() == primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result = this->getDouble() == primitive.getShort();
+				result.setBool(this->getDouble() == primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result = this->getDouble() == primitive.getInt();
+				result.setBool(this->getDouble() == primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result = this->getDouble() == primitive.getLong();
+				result.setBool(this->getDouble() == primitive.getLong());
 				break;
 			case Type::FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() == primitive.getFloat();
+				result.setBool(this->getDouble() == primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() == primitive.getDouble();
+				result.setBool(this->getDouble() == primitive.getDouble());
 				break;
 			default:
 
@@ -301,37 +301,37 @@ namespace day {
 	}
 
 	// Not equal
-	bool Double::operator!=(Primitive &primitive) {
+	Boolean Double::operator!=(Primitive &primitive) {
 
-		bool result;
+		Boolean result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result = this->getDouble() != primitive.getChar();
+				result.setBool(this->getDouble() != primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result = this->getDouble() != primitive.getShort();
+				result.setBool(this->getDouble() != primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result = this->getDouble() != primitive.getInt();
+				result.setBool(this->getDouble() != primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result = this->getDouble() != primitive.getLong();
+				result.setBool(this->getDouble() != primitive.getLong());
 				break;
 			case Type::FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() != primitive.getFloat();
+				result.setBool(this->getDouble() != primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() != primitive.getDouble();
+				result.setBool(this->getDouble() != primitive.getDouble());
 				break;
 			default:
 
@@ -342,37 +342,37 @@ namespace day {
 	}
 
 	// Greater than
-	bool Double::operator>(Primitive &primitive) {
+	Boolean Double::operator>(Primitive &primitive) {
 
-		bool result;
+		Boolean result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result = this->getDouble() > primitive.getChar();
+				result.setBool(this->getDouble() > primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result = this->getDouble() > primitive.getShort();
+				result.setBool(this->getDouble() > primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result = this->getDouble() > primitive.getInt();
+				result.setBool(this->getDouble() > primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result = this->getDouble() > primitive.getLong();
+				result.setBool(this->getDouble() > primitive.getLong());
 				break;
 			case Type::FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() > primitive.getFloat();
+				result.setBool(this->getDouble() > primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() > primitive.getDouble();
+				result.setBool(this->getDouble() > primitive.getDouble());
 				break;
 			default:
 
@@ -383,37 +383,37 @@ namespace day {
 	}
 
 	// Less than
-	bool Double::operator<(Primitive &primitive) {
+	Boolean Double::operator<(Primitive &primitive) {
 
-		bool result;
+		Boolean result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result = this->getDouble() < primitive.getChar();
+				result.setBool(this->getDouble() < primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result = this->getDouble() < primitive.getShort();
+				result.setBool(this->getDouble() < primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result = this->getDouble() < primitive.getInt();
+				result.setBool(this->getDouble() < primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result = this->getDouble() < primitive.getLong();
+				result.setBool(this->getDouble() < primitive.getLong());
 				break;
 			case Type::FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() < primitive.getFloat();
+				result.setBool(this->getDouble() < primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() < primitive.getDouble();
+				result.setBool(this->getDouble() < primitive.getDouble());
 				break;
 			default:
 
@@ -424,37 +424,37 @@ namespace day {
 	}
 
 	// Greater than or equal to
-	bool Double::operator>=(Primitive &primitive) {
+	Boolean Double::operator>=(Primitive &primitive) {
 
-		bool result;
+		Boolean result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result = this->getDouble() >= primitive.getChar();
+				result.setBool(this->getDouble() >= primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result = this->getDouble() >= primitive.getShort();
+				result.setBool(this->getDouble() >= primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result = this->getDouble() >= primitive.getInt();
+				result.setBool(this->getDouble() >= primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result = this->getDouble() >= primitive.getLong();
+				result.setBool(this->getDouble() >= primitive.getLong());
 				break;
 			case Type::FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() >= primitive.getFloat();
+				result.setBool(this->getDouble() >= primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() >= primitive.getDouble();
+				result.setBool(this->getDouble() >= primitive.getDouble());
 				break;
 			default:
 
@@ -465,37 +465,37 @@ namespace day {
 	}
 
 	// Less than or equal to
-	bool Double::operator<=(Primitive &primitive) {
+	Boolean Double::operator<=(Primitive &primitive) {
 
-		bool result;
+		Boolean result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result = this->getDouble() <= primitive.getChar();
+				result.setBool(this->getDouble() <= primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result = this->getDouble() <= primitive.getShort();
+				result.setBool(this->getDouble() <= primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result = this->getDouble() <= primitive.getInt();
+				result.setBool(this->getDouble() <= primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result = this->getDouble() <= primitive.getLong();
+				result.setBool(this->getDouble() <= primitive.getLong());
 				break;
 			case Type::FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() <= primitive.getFloat();
+				result.setBool(this->getDouble() <= primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result = this->getDouble() <= primitive.getDouble();
+				result.setBool(this->getDouble() <= primitive.getDouble());
 				break;
 			default:
 
