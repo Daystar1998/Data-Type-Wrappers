@@ -63,7 +63,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator=(primitive);
 		};
 
 		return *this;
@@ -102,7 +102,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator+(primitive);
 		};
 
 		return result;
@@ -141,7 +141,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator-(primitive);
 		};
 
 		return result;
@@ -180,7 +180,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator*(primitive);
 		};
 
 		return result;
@@ -219,7 +219,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator/(primitive);
 		};
 
 		return result;
@@ -258,7 +258,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator%(primitive);
 		};
 
 		return result;
@@ -323,7 +323,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator|(primitive);
 		};
 
 		return result;
@@ -354,7 +354,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator&(primitive);
 		};
 
 		return result;
@@ -395,13 +395,13 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator^(primitive);
 		};
 
 		return result;
 	}
 
-	// Left shift
+	// Bitwise left shift
 	Primitive Integer::operator<<(Primitive &primitive) {
 
 		Integer result;
@@ -426,13 +426,13 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator<<(primitive);
 		};
 
 		return result;
 	}
 
-	// Right shift
+	// Bitwise right shift
 	Primitive Integer::operator>>(Primitive &primitive) {
 
 		Integer result;
@@ -457,13 +457,13 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator>>(primitive);
 		};
 
 		return result;
 	}
 
-	// Equals
+	// Equal to
 	Primitive Integer::operator==(Primitive &primitive) {
 
 		Boolean result;
@@ -498,13 +498,13 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator==(primitive);
 		};
 
 		return result;
 	}
 
-	// Not equal
+	// Not equal to
 	Primitive Integer::operator!=(Primitive &primitive) {
 
 		Boolean result;
@@ -539,7 +539,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator!=(primitive);
 		};
 
 		return result;
@@ -580,7 +580,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator>(primitive);
 		};
 
 		return result;
@@ -621,7 +621,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator<(primitive);
 		};
 
 		return result;
@@ -662,7 +662,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator>=(primitive);
 		};
 
 		return result;
@@ -703,7 +703,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator<=(primitive);
 		};
 
 		return result;

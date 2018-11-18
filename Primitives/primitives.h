@@ -68,6 +68,17 @@ namespace day {
 		inline Type getType();
 
 		/******************************************************************************
+			Function Name: typeName
+
+			Des:
+				Get the type as a string
+
+			Returns:
+				type string, the type as a string
+		******************************************************************************/
+		string typeName();
+
+		/******************************************************************************
 			Function Name: toString
 
 			Des:

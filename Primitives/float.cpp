@@ -63,7 +63,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator=(primitive);
 		};
 
 		return *this;
@@ -102,7 +102,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator+(primitive);
 		};
 
 		return result;
@@ -141,7 +141,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator-(primitive);
 		};
 
 		return result;
@@ -180,7 +180,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator*(primitive);
 		};
 
 		return result;
@@ -219,7 +219,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator/(primitive);
 		};
 
 		return result;
@@ -259,7 +259,7 @@ namespace day {
 		return result;
 	}
 
-	// Equals
+	// Equal to
 	Primitive Float::operator==(Primitive &primitive) {
 
 		Boolean result;
@@ -294,13 +294,13 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator==(primitive);
 		};
 
 		return result;
 	}
 
-	// Not equal
+	// Not equal to
 	Primitive Float::operator!=(Primitive &primitive) {
 
 		Boolean result;
@@ -335,7 +335,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator!=(primitive);
 		};
 
 		return result;
@@ -376,7 +376,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator>(primitive);
 		};
 
 		return result;
@@ -417,7 +417,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator<(primitive);
 		};
 
 		return result;
@@ -458,7 +458,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator>=(primitive);
 		};
 
 		return result;
@@ -499,7 +499,7 @@ namespace day {
 				break;
 			default:
 
-				throw new exception("Unsupported operation");
+				Primitive::operator<=(primitive);
 		};
 
 		return result;

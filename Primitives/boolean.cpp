@@ -33,7 +33,7 @@ namespace day {
 		if (primitive.getType() == Type::BOOLEAN)
 			this->setBool(primitive.getBool());
 		else
-			throw new exception("Unsupported operation");
+			Primitive::operator=(primitive);
 
 		return *this;
 	}
@@ -59,7 +59,7 @@ namespace day {
 		if (primitive.getType() == Type::BOOLEAN)
 			result.setBool(this->getBool() && primitive.getBool());
 		else
-			throw new exception("Unsupported operation");
+			Primitive::operator&&(primitive);
 
 		return result;
 	}
@@ -72,7 +72,7 @@ namespace day {
 		if (primitive.getType() == Type::BOOLEAN)
 			result.setBool(this->getBool() || primitive.getBool());
 		else
-			throw new exception("Unsupported operation");
+			Primitive::operator||(primitive);
 
 		return result;
 	}
