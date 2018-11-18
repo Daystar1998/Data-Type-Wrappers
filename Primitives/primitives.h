@@ -155,6 +155,20 @@ namespace day {
 		virtual Primitive operator-(Primitive &primitive);
 
 		/******************************************************************************
+			Function Name: operator-
+
+			Des:
+				Override unary minus operator
+
+			Params:
+				primitive - type Primitive &, the primitive type to be subtracted by
+
+			Returns:
+				type Primitive, the resulting value
+		******************************************************************************/
+		virtual Primitive operator-();
+
+		/******************************************************************************
 			Function Name: operator*
 
 			Des:

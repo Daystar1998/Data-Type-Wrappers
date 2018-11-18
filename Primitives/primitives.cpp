@@ -96,6 +96,43 @@ namespace day {
 		throw new exception(message.c_str());
 	}
 
+	Primitive Primitive::operator-() {
+
+		switch (this->getType()) {
+
+			case Type::CHAR:
+
+				this->setChar(-this->getChar());
+				break;
+			case Type::SHORT:
+
+				this->setChar(-this->getShort());
+				break;
+			case Type::INTEGER:
+
+				this->setChar(-this->getInt());
+				break;
+			case Type::LONG:
+
+				this->setChar(-this->getLong());
+				break;
+			case Type::FLOAT:
+
+				this->setChar(-this->getFloat());
+				break;
+			case Type::DOUBLE:
+
+				this->setChar(-this->getDouble());
+				break;
+			default:
+
+				string message = "Unary minus '-' operation for type " + this->typeName() + " is not supported";
+				throw new exception(message.c_str());
+		};
+
+		return *this;
+	}
+
 	Primitive Primitive::operator*(Primitive &primitive) {
 
 		string message = "Multiplication '*' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
