@@ -310,9 +310,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type Boolean, the resulting value
+				type Primitive, the resulting value
 		******************************************************************************/
-		Boolean operator==(Primitive &primitive) override;
+		Primitive operator==(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator!=
@@ -324,9 +324,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type Boolean, the resulting value
+				type Primitive, the resulting value
 		******************************************************************************/
-		Boolean operator!=(Primitive &primitive) override;
+		Primitive operator!=(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator>
@@ -338,9 +338,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type Boolean, the resulting value
+				type Primitive, the resulting value
 		******************************************************************************/
-		Boolean operator>(Primitive &primitive) override;
+		Primitive operator>(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator<
@@ -352,9 +352,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type Boolean, the resulting value
+				type Primitive, the resulting value
 		******************************************************************************/
-		Boolean operator<(Primitive &primitive) override;
+		Primitive operator<(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator>=
@@ -366,9 +366,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type Boolean, the resulting value
+				type Primitive, the resulting value
 		******************************************************************************/
-		Boolean operator>=(Primitive &primitive) override;
+		Primitive operator>=(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator<=
@@ -380,9 +380,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type Boolean, the resulting value
+				type Primitive, the resulting value
 		******************************************************************************/
-		Boolean operator<=(Primitive &primitive) override;
+		Primitive operator<=(Primitive &primitive) override;
 
 		/******************************************************************************
 			Compound assignment operators

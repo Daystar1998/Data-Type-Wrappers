@@ -260,7 +260,7 @@ namespace day {
 	}
 
 	// Equals
-	Boolean Double::operator==(Primitive &primitive) {
+	Primitive Double::operator==(Primitive &primitive) {
 
 		Boolean result;
 
@@ -301,7 +301,7 @@ namespace day {
 	}
 
 	// Not equal
-	Boolean Double::operator!=(Primitive &primitive) {
+	Primitive Double::operator!=(Primitive &primitive) {
 
 		Boolean result;
 
@@ -342,7 +342,7 @@ namespace day {
 	}
 
 	// Greater than
-	Boolean Double::operator>(Primitive &primitive) {
+	Primitive Double::operator>(Primitive &primitive) {
 
 		Boolean result;
 
@@ -383,7 +383,7 @@ namespace day {
 	}
 
 	// Less than
-	Boolean Double::operator<(Primitive &primitive) {
+	Primitive Double::operator<(Primitive &primitive) {
 
 		Boolean result;
 
@@ -424,7 +424,7 @@ namespace day {
 	}
 
 	// Greater than or equal to
-	Boolean Double::operator>=(Primitive &primitive) {
+	Primitive Double::operator>=(Primitive &primitive) {
 
 		Boolean result;
 
@@ -465,7 +465,7 @@ namespace day {
 	}
 
 	// Less than or equal to
-	Boolean Double::operator<=(Primitive &primitive) {
+	Primitive Double::operator<=(Primitive &primitive) {
 
 		Boolean result;
 

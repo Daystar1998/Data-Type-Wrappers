@@ -31,8 +31,6 @@
 #include <iostream>
 #include <string>
 
-#include "boolean.h"
-
 using std::exception;
 using std::string;
 using std::to_string;
@@ -330,9 +328,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type Boolean, the resulting value
+				type Primitive, the resulting value
 		******************************************************************************/
-		virtual Boolean operator==(Primitive &primitive);
+		virtual Primitive operator==(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator!=
@@ -344,9 +342,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type Boolean, the resulting value
+				type Primitive, the resulting value
 		******************************************************************************/
-		virtual Boolean operator!=(Primitive &primitive);
+		virtual Primitive operator!=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator>
@@ -358,9 +356,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type Boolean, the resulting value
+				type Primitive, the resulting value
 		******************************************************************************/
-		virtual Boolean operator>(Primitive &primitive);
+		virtual Primitive operator>(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator<
@@ -372,9 +370,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type Boolean, the resulting value
+				type Primitive, the resulting value
 		******************************************************************************/
-		virtual Boolean operator<(Primitive &primitive);
+		virtual Primitive operator<(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator>=
@@ -386,9 +384,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type Boolean, the resulting value
+				type Primitive, the resulting value
 		******************************************************************************/
-		virtual Boolean operator>=(Primitive &primitive);
+		virtual Primitive operator>=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator<=
@@ -400,9 +398,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type Boolean, the resulting value
+				type Primitive, the resulting value
 		******************************************************************************/
-		virtual Boolean operator<=(Primitive &primitive);
+		virtual Primitive operator<=(Primitive &primitive);
 
 		/******************************************************************************
 			Compound assignment operators
