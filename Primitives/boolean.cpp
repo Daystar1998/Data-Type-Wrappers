@@ -30,7 +30,7 @@ namespace day {
 	// Assignment
 	Boolean& Boolean::operator=(Primitive &primitive) {
 
-		if (primitive.getType() == BOOLEAN)
+		if (primitive.getType() == Type::BOOLEAN)
 			this->setBool(primitive.getBool());
 		else
 			throw new exception("Unsupported operation");
@@ -56,7 +56,7 @@ namespace day {
 
 		Boolean result;
 
-		if (primitive.getType() == BOOLEAN)
+		if (primitive.getType() == Type::BOOLEAN)
 			result.setBool(this->getBool() && primitive.getBool());
 		else
 			throw new exception("Unsupported operation");
@@ -69,7 +69,7 @@ namespace day {
 
 		Boolean result;
 
-		if (primitive.getType() == BOOLEAN)
+		if (primitive.getType() == Type::BOOLEAN)
 			result.setBool(this->getBool() || primitive.getBool());
 		else
 			throw new exception("Unsupported operation");

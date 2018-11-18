@@ -41,7 +41,17 @@ namespace day {
 
 	public:
 
-		enum Type { VOID, CHAR, SHORT, INTEGER, LONG, FLOAT, DOUBLE, BOOLEAN };
+		enum class Type {
+
+			VOID,
+			CHAR,
+			SHORT,
+			INTEGER,
+			LONG,
+			FLOAT,
+			DOUBLE,
+			BOOLEAN
+		};
 
 	protected:
 
@@ -52,7 +62,7 @@ namespace day {
 		/******************************************************************************
 		Constructor
 		******************************************************************************/
-		Primitive(Type type = VOID) : TYPE(type) {}
+		Primitive(Type type = Type::VOID) : TYPE(type) {}
 
 		inline Type getType();
 

@@ -37,27 +37,27 @@ namespace day {
 
 		switch (primitive.getType()) {
 
-			case CHAR:
+			case Type::CHAR:
 
 				this->setFloat(primitive.getChar());
 				break;
-			case SHORT:
+			case Type::SHORT:
 
 				this->setFloat(primitive.getShort());
 				break;
-			case INTEGER:
+			case Type::INTEGER:
 
 				this->setFloat(primitive.getInt());
 				break;
-			case LONG:
+			case Type::LONG:
 
 				this->setFloat(primitive.getLong());
 				break;
-			case FLOAT:
+			case Type::FLOAT:
 
 				this->setFloat(primitive.getFloat());
 				break;
-			case DOUBLE:
+			case Type::DOUBLE:
 
 				this->setFloat(primitive.getDouble());
 				break;
@@ -76,27 +76,27 @@ namespace day {
 
 		switch (primitive.getType()) {
 
-			case CHAR:
+			case Type::CHAR:
 
 				result.setFloat(this->getFloat() + primitive.getChar());
 				break;
-			case SHORT:
+			case Type::SHORT:
 
 				result.setFloat(this->getFloat() + primitive.getShort());
 				break;
-			case INTEGER:
+			case Type::INTEGER:
 
 				result.setFloat(this->getFloat() + primitive.getInt());
 				break;
-			case LONG:
+			case Type::LONG:
 
 				result.setFloat(this->getFloat() + primitive.getLong());
 				break;
-			case FLOAT:
+			case Type::FLOAT:
 
 				result.setFloat(this->getFloat() + primitive.getFloat());
 				break;
-			case DOUBLE:
+			case Type::DOUBLE:
 
 				result.setFloat(this->getFloat() + primitive.getDouble());
 				break;
@@ -115,27 +115,27 @@ namespace day {
 
 		switch (primitive.getType()) {
 
-			case CHAR:
+			case Type::CHAR:
 
 				result.setFloat(this->getFloat() - primitive.getChar());
 				break;
-			case SHORT:
+			case Type::SHORT:
 
 				result.setFloat(this->getFloat() - primitive.getShort());
 				break;
-			case INTEGER:
+			case Type::INTEGER:
 
 				result.setFloat(this->getFloat() - primitive.getInt());
 				break;
-			case LONG:
+			case Type::LONG:
 
 				result.setFloat(this->getFloat() - primitive.getLong());
 				break;
-			case FLOAT:
+			case Type::FLOAT:
 
 				result.setFloat(this->getFloat() - primitive.getFloat());
 				break;
-			case DOUBLE:
+			case Type::DOUBLE:
 
 				result.setFloat(this->getFloat() - primitive.getDouble());
 				break;
@@ -154,27 +154,27 @@ namespace day {
 
 		switch (primitive.getType()) {
 
-			case CHAR:
+			case Type::CHAR:
 
 				result.setFloat(this->getFloat() * primitive.getChar());
 				break;
-			case SHORT:
+			case Type::SHORT:
 
 				result.setFloat(this->getFloat() * primitive.getShort());
 				break;
-			case INTEGER:
+			case Type::INTEGER:
 
 				result.setFloat(this->getFloat() * primitive.getInt());
 				break;
-			case LONG:
+			case Type::LONG:
 
 				result.setFloat(this->getFloat() * primitive.getLong());
 				break;
-			case FLOAT:
+			case Type::FLOAT:
 
 				result.setFloat(this->getFloat() * primitive.getFloat());
 				break;
-			case DOUBLE:
+			case Type::DOUBLE:
 
 				result.setFloat(this->getFloat() * primitive.getDouble());
 				break;
@@ -193,27 +193,27 @@ namespace day {
 
 		switch (primitive.getType()) {
 
-			case CHAR:
+			case Type::CHAR:
 
 				result.setFloat(this->getFloat() / primitive.getChar());
 				break;
-			case SHORT:
+			case Type::SHORT:
 
 				result.setFloat(this->getFloat() / primitive.getShort());
 				break;
-			case INTEGER:
+			case Type::INTEGER:
 
 				result.setFloat(this->getFloat() / primitive.getInt());
 				break;
-			case LONG:
+			case Type::LONG:
 
 				result.setFloat(this->getFloat() / primitive.getLong());
 				break;
-			case FLOAT:
+			case Type::FLOAT:
 
 				result.setFloat(this->getFloat() / primitive.getFloat());
 				break;
-			case DOUBLE:
+			case Type::DOUBLE:
 
 				result.setFloat(this->getFloat() / primitive.getDouble());
 				break;
@@ -266,28 +266,28 @@ namespace day {
 
 		switch (primitive.getType()) {
 
-			case CHAR:
+			case Type::CHAR:
 
 				result = this->getFloat() == primitive.getChar();
 				break;
-			case SHORT:
+			case Type::SHORT:
 
 				result = this->getFloat() == primitive.getShort();
 				break;
-			case INTEGER:
+			case Type::INTEGER:
 
 				result = this->getFloat() == primitive.getInt();
 				break;
-			case LONG:
+			case Type::LONG:
 
 				result = this->getFloat() == primitive.getLong();
 				break;
-			case FLOAT:
+			case Type::FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
 				result = this->getFloat() == primitive.getFloat();
 				break;
-			case DOUBLE:
+			case Type::DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
 				result = this->getFloat() == primitive.getDouble();
@@ -307,28 +307,28 @@ namespace day {
 
 		switch (primitive.getType()) {
 
-			case CHAR:
+			case Type::CHAR:
 
 				result = this->getFloat() != primitive.getChar();
 				break;
-			case SHORT:
+			case Type::SHORT:
 
 				result = this->getFloat() != primitive.getShort();
 				break;
-			case INTEGER:
+			case Type::INTEGER:
 
 				result = this->getFloat() != primitive.getInt();
 				break;
-			case LONG:
+			case Type::LONG:
 
 				result = this->getFloat() != primitive.getLong();
 				break;
-			case FLOAT:
+			case Type::FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
 				result = this->getFloat() != primitive.getFloat();
 				break;
-			case DOUBLE:
+			case Type::DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
 				result = this->getFloat() != primitive.getDouble();
@@ -348,28 +348,28 @@ namespace day {
 
 		switch (primitive.getType()) {
 
-			case CHAR:
+			case Type::CHAR:
 
 				result = this->getFloat() > primitive.getChar();
 				break;
-			case SHORT:
+			case Type::SHORT:
 
 				result = this->getFloat() > primitive.getShort();
 				break;
-			case INTEGER:
+			case Type::INTEGER:
 
 				result = this->getFloat() > primitive.getInt();
 				break;
-			case LONG:
+			case Type::LONG:
 
 				result = this->getFloat() > primitive.getLong();
 				break;
-			case FLOAT:
+			case Type::FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
 				result = this->getFloat() > primitive.getFloat();
 				break;
-			case DOUBLE:
+			case Type::DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
 				result = this->getFloat() > primitive.getDouble();
@@ -389,28 +389,28 @@ namespace day {
 
 		switch (primitive.getType()) {
 
-			case CHAR:
+			case Type::CHAR:
 
 				result = this->getFloat() < primitive.getChar();
 				break;
-			case SHORT:
+			case Type::SHORT:
 
 				result = this->getFloat() < primitive.getShort();
 				break;
-			case INTEGER:
+			case Type::INTEGER:
 
 				result = this->getFloat() < primitive.getInt();
 				break;
-			case LONG:
+			case Type::LONG:
 
 				result = this->getFloat() < primitive.getLong();
 				break;
-			case FLOAT:
+			case Type::FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
 				result = this->getFloat() < primitive.getFloat();
 				break;
-			case DOUBLE:
+			case Type::DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
 				result = this->getFloat() < primitive.getDouble();
@@ -430,28 +430,28 @@ namespace day {
 
 		switch (primitive.getType()) {
 
-			case CHAR:
+			case Type::CHAR:
 
 				result = this->getFloat() >= primitive.getChar();
 				break;
-			case SHORT:
+			case Type::SHORT:
 
 				result = this->getFloat() >= primitive.getShort();
 				break;
-			case INTEGER:
+			case Type::INTEGER:
 
 				result = this->getFloat() >= primitive.getInt();
 				break;
-			case LONG:
+			case Type::LONG:
 
 				result = this->getFloat() >= primitive.getLong();
 				break;
-			case FLOAT:
+			case Type::FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
 				result = this->getFloat() >= primitive.getFloat();
 				break;
-			case DOUBLE:
+			case Type::DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
 				result = this->getFloat() >= primitive.getDouble();
@@ -471,28 +471,28 @@ namespace day {
 
 		switch (primitive.getType()) {
 
-			case CHAR:
+			case Type::CHAR:
 
 				result = this->getFloat() <= primitive.getChar();
 				break;
-			case SHORT:
+			case Type::SHORT:
 
 				result = this->getFloat() <= primitive.getShort();
 				break;
-			case INTEGER:
+			case Type::INTEGER:
 
 				result = this->getFloat() <= primitive.getInt();
 				break;
-			case LONG:
+			case Type::LONG:
 
 				result = this->getFloat() <= primitive.getLong();
 				break;
-			case FLOAT:
+			case Type::FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
 				result = this->getFloat() <= primitive.getFloat();
 				break;
-			case DOUBLE:
+			case Type::DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
 				result = this->getFloat() <= primitive.getDouble();
