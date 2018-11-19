@@ -31,6 +31,8 @@
 #include <iostream>
 #include <string>
 
+#include "Exceptions/divideByZeroException.h"
+
 using std::exception;
 using std::string;
 using std::to_string;

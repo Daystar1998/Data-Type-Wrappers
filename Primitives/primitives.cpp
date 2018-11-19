@@ -291,9 +291,11 @@ namespace day {
 		try {
 
 			*this = (Primitive&)(*this / primitive);
+		} catch (DivideByZeroException e) {
+
+			throw e;
 		} catch (exception e) {
 
-			// TODO: Correctly report divide by zero
 			string message = "Division assignment '/=' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
 			throw new exception(message.c_str());
 		}
@@ -307,9 +309,11 @@ namespace day {
 		try {
 
 			*this = (Primitive&)(*this % primitive);
+		} catch (DivideByZeroException e) {
+
+			throw e;
 		} catch (exception e) {
 
-			// TODO: Correctly report divide by zero
 			string message = "Modulation assignment '%=' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
 			throw new exception(message.c_str());
 		}

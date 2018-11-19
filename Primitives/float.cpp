@@ -201,25 +201,43 @@ namespace day {
 
 			case Type::CHAR:
 
+				if (primitive.getChar() == 0)
+					throw new DivideByZeroException();
+
 				result = (Primitive&)Float(this->getFloat() / primitive.getChar());
 				break;
 			case Type::SHORT:
+
+				if (primitive.getShort() == 0)
+					throw new DivideByZeroException();
 
 				result = (Primitive&)Float(this->getFloat() / primitive.getShort());
 				break;
 			case Type::INTEGER:
 
+				if (primitive.getInt() == 0)
+					throw new DivideByZeroException();
+
 				result = (Primitive&)Float(this->getFloat() / primitive.getInt());
 				break;
 			case Type::LONG:
+
+				if (primitive.getLong() == 0)
+					throw new DivideByZeroException();
 
 				result = (Primitive&)Float(this->getFloat() / primitive.getLong());
 				break;
 			case Type::FLOAT:
 
+				if (primitive.getFloat() == 0)
+					throw new DivideByZeroException();
+
 				result = (Primitive&)Float(this->getFloat() / primitive.getFloat());
 				break;
 			case Type::DOUBLE:
+
+				if (primitive.getDouble() == 0)
+					throw new DivideByZeroException();
 
 				result = (Primitive&)Double(this->getFloat() / primitive.getDouble());
 				break;

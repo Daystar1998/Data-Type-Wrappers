@@ -201,25 +201,43 @@ namespace day {
 
 			case Type::CHAR:
 
+				if (primitive.getChar() == 0)
+					throw new DivideByZeroException();
+
 				result = (Primitive&)Integer(this->getInt() / primitive.getChar());
 				break;
 			case Type::SHORT:
+
+				if (primitive.getShort() == 0)
+					throw new DivideByZeroException();
 
 				result = (Primitive&)Integer(this->getInt() / primitive.getShort());
 				break;
 			case Type::INTEGER:
 
+				if (primitive.getInt() == 0)
+					throw new DivideByZeroException();
+
 				result = (Primitive&)Integer(this->getInt() / primitive.getInt());
 				break;
 			case Type::LONG:
+
+				if (primitive.getLong() == 0)
+					throw new DivideByZeroException();
 
 				result = (Primitive&)Long(this->getInt() / primitive.getLong());
 				break;
 			case Type::FLOAT:
 
+				if (primitive.getFloat() == 0)
+					throw new DivideByZeroException();
+
 				result = (Primitive&)Float(this->getInt() / primitive.getFloat());
 				break;
 			case Type::DOUBLE:
+
+				if (primitive.getDouble() == 0)
+					throw new DivideByZeroException();
 
 				result = (Primitive&)Double(this->getInt() / primitive.getDouble());
 				break;
@@ -240,17 +258,29 @@ namespace day {
 
 			case Type::CHAR:
 
+				if (primitive.getChar() == 0)
+					throw new DivideByZeroException();
+
 				result = (Primitive&)Integer(this->getInt() % primitive.getChar());
 				break;
 			case Type::SHORT:
+
+				if (primitive.getShort() == 0)
+					throw new DivideByZeroException();
 
 				result = (Primitive&)Integer(this->getInt() % primitive.getShort());
 				break;
 			case Type::INTEGER:
 
+				if (primitive.getInt() == 0)
+					throw new DivideByZeroException();
+
 				result = (Primitive&)Integer(this->getInt() % primitive.getInt());
 				break;
 			case Type::LONG:
+
+				if (primitive.getLong() == 0)
+					throw new DivideByZeroException();
 
 				result = (Primitive&)Long(this->getInt() % primitive.getLong());
 				break;
