@@ -81,7 +81,7 @@ namespace day {
 	// Assignment
 	Primitive& Primitive::operator=(Primitive &primitive) {
 
-		// TODO: Default case for if this is type VOID
+		// TODO: Default case for if 'this' is type VOID
 		string message = "Assignment '=' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
 		throw new exception(message.c_str());
 	}

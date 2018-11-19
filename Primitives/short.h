@@ -29,6 +29,11 @@
 
 #include "primitives.h"
 #include "boolean.h"
+#include "double.h"
+#include "float.h"
+#include "integer.h"
+#include "long.h"
+#include "short.h"
 
 namespace day {
 

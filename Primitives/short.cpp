@@ -72,33 +72,33 @@ namespace day {
 	// Addition
 	Primitive Short::operator+(Primitive &primitive) {
 
-		Short result;
+		Primitive result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result.setShort(this->getShort() + primitive.getChar());
+				result = (Primitive&)Short(this->getShort() + primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result.setShort(this->getShort() + primitive.getShort());
+				result = (Primitive&)Short(this->getShort() + primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result.setShort(this->getShort() + primitive.getInt());
+				result = (Primitive&)Integer(this->getShort() + primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result.setShort(this->getShort() + primitive.getLong());
+				result = (Primitive&)Long(this->getShort() + primitive.getLong());
 				break;
 			case Type::FLOAT:
 
-				result.setShort(this->getShort() + primitive.getFloat());
+				result = (Primitive&)Float(this->getShort() + primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
-				result.setShort(this->getShort() + primitive.getDouble());
+				result = (Primitive&)Double(this->getShort() + primitive.getDouble());
 				break;
 			default:
 
@@ -111,33 +111,33 @@ namespace day {
 	// Subtraction
 	Primitive Short::operator-(Primitive &primitive) {
 
-		Short result;
+		Primitive result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result.setShort(this->getShort() - primitive.getChar());
+				result = (Primitive&)Short(this->getShort() - primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result.setShort(this->getShort() - primitive.getShort());
+				result = (Primitive&)Short(this->getShort() - primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result.setShort(this->getShort() - primitive.getInt());
+				result = (Primitive&)Integer(this->getShort() - primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result.setShort(this->getShort() - primitive.getLong());
+				result = (Primitive&)Long(this->getShort() - primitive.getLong());
 				break;
 			case Type::FLOAT:
 
-				result.setShort(this->getShort() - primitive.getFloat());
+				result = (Primitive&)Float(this->getShort() - primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
-				result.setShort(this->getShort() - primitive.getDouble());
+				result = (Primitive&)Double(this->getShort() - primitive.getDouble());
 				break;
 			default:
 
@@ -156,33 +156,33 @@ namespace day {
 	// Multiplication
 	Primitive Short::operator*(Primitive &primitive) {
 
-		Short result;
+		Primitive result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result.setShort(this->getShort() * primitive.getChar());
+				result = (Primitive&)Short(this->getShort() * primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result.setShort(this->getShort() * primitive.getShort());
+				result = (Primitive&)Short(this->getShort() * primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result.setShort(this->getShort() * primitive.getInt());
+				result = (Primitive&)Integer(this->getShort() * primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result.setShort(this->getShort() * primitive.getLong());
+				result = (Primitive&)Long(this->getShort() * primitive.getLong());
 				break;
 			case Type::FLOAT:
 
-				result.setShort(this->getShort() * primitive.getFloat());
+				result = (Primitive&)Float(this->getShort() * primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
-				result.setShort(this->getShort() * primitive.getDouble());
+				result = (Primitive&)Double(this->getShort() * primitive.getDouble());
 				break;
 			default:
 
@@ -195,33 +195,33 @@ namespace day {
 	// Division
 	Primitive Short::operator/(Primitive &primitive) {
 
-		Short result;
+		Primitive result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result.setShort(this->getShort() / primitive.getChar());
+				result = (Primitive&)Short(this->getShort() / primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result.setShort(this->getShort() / primitive.getShort());
+				result = (Primitive&)Short(this->getShort() / primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result.setShort(this->getShort() / primitive.getInt());
+				result = (Primitive&)Integer(this->getShort() / primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result.setShort(this->getShort() / primitive.getLong());
+				result = (Primitive&)Long(this->getShort() / primitive.getLong());
 				break;
 			case Type::FLOAT:
 
-				result.setShort(this->getShort() / primitive.getFloat());
+				result = (Primitive&)Float(this->getShort() / primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
-				result.setShort(this->getShort() / primitive.getDouble());
+				result = (Primitive&)Double(this->getShort() / primitive.getDouble());
 				break;
 			default:
 
@@ -234,33 +234,25 @@ namespace day {
 	// Modulation
 	Primitive Short::operator%(Primitive &primitive) {
 
-		Short result;
+		Primitive result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result.setShort(this->getShort() % primitive.getChar());
+				result = (Primitive&)Short(this->getShort() % primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result.setShort(this->getShort() % primitive.getShort());
+				result = (Primitive&)Short(this->getShort() % primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result.setShort(this->getShort() % primitive.getInt());
+				result = (Primitive&)Integer(this->getShort() % primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result.setShort(this->getShort() % primitive.getLong());
-				break;
-			case Type::FLOAT:
-				// TODO: Decide whether on not to remove this
-				result.setShort(this->getShort() % (int)primitive.getFloat());
-				break;
-			case Type::DOUBLE:
-
-				result.setShort(this->getShort() % (int)primitive.getDouble());
+				result = (Primitive&)Long(this->getShort() % primitive.getLong());
 				break;
 			default:
 
@@ -307,25 +299,25 @@ namespace day {
 	// Bitwise OR
 	Primitive Short::operator|(Primitive &primitive) {
 
-		Short result;
+		Primitive result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result.setShort(this->getShort() | primitive.getChar());
+				result = (Primitive&)Short(this->getShort() | primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result.setShort(this->getShort() | primitive.getShort());
+				result = (Primitive&)Short(this->getShort() | primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result.setShort(this->getShort() | primitive.getInt());
+				result = (Primitive&)Integer(this->getShort() | primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result.setShort(this->getShort() | primitive.getLong());
+				result = (Primitive&)Long(this->getShort() | primitive.getLong());
 				break;
 			default:
 
@@ -338,25 +330,25 @@ namespace day {
 	// Bitwise AND
 	Primitive Short::operator&(Primitive &primitive) {
 
-		Short result;
+		Primitive result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result.setShort(this->getShort() & primitive.getChar());
+				result = (Primitive&)Short(this->getShort() & primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result.setShort(this->getShort() & primitive.getShort());
+				result = (Primitive&)Short(this->getShort() & primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result.setShort(this->getShort() & primitive.getInt());
+				result = (Primitive&)Integer(this->getShort() & primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result.setShort(this->getShort() & primitive.getLong());
+				result = (Primitive&)Long(this->getShort() & primitive.getLong());
 				break;
 			default:
 
@@ -379,25 +371,25 @@ namespace day {
 	// Bitwise XOR
 	Primitive Short::operator^(Primitive &primitive) {
 
-		Short result;
+		Primitive result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result.setShort(this->getShort() ^ primitive.getChar());
+				result = (Primitive&)Short(this->getShort() ^ primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result.setShort(this->getShort() ^ primitive.getShort());
+				result = (Primitive&)Short(this->getShort() ^ primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result.setShort(this->getShort() ^ primitive.getInt());
+				result = (Primitive&)Integer(this->getShort() ^ primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result.setShort(this->getShort() ^ primitive.getLong());
+				result = (Primitive&)Long(this->getShort() ^ primitive.getLong());
 				break;
 			default:
 
@@ -410,25 +402,25 @@ namespace day {
 	// Bitwise left shift
 	Primitive Short::operator<<(Primitive &primitive) {
 
-		Short result;
+		Primitive result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result.setShort(this->getShort() << primitive.getChar());
+				result = (Primitive&)Short(this->getShort() << primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result.setShort(this->getShort() << primitive.getShort());
+				result = (Primitive&)Short(this->getShort() << primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result.setShort(this->getShort() << primitive.getInt());
+				result = (Primitive&)Integer(this->getShort() << primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result.setShort(this->getShort() << primitive.getLong());
+				result = (Primitive&)Long(this->getShort() << primitive.getLong());
 				break;
 			default:
 
@@ -441,25 +433,25 @@ namespace day {
 	// Bitwise right shift
 	Primitive Short::operator>>(Primitive &primitive) {
 
-		Short result;
+		Primitive result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result.setShort(this->getShort() >> primitive.getChar());
+				result = (Primitive&)Short(this->getShort() >> primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result.setShort(this->getShort() >> primitive.getShort());
+				result = (Primitive&)Short(this->getShort() >> primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result.setShort(this->getShort() >> primitive.getInt());
+				result = (Primitive&)Integer(this->getShort() >> primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result.setShort(this->getShort() >> primitive.getLong());
+				result = (Primitive&)Long(this->getShort() >> primitive.getLong());
 				break;
 			default:
 

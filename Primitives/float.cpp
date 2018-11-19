@@ -72,33 +72,33 @@ namespace day {
 	// Addition
 	Primitive Float::operator+(Primitive &primitive) {
 
-		Float result;
+		Primitive result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result.setFloat(this->getFloat() + primitive.getChar());
+				result = (Primitive&)Float(this->getFloat() + primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result.setFloat(this->getFloat() + primitive.getShort());
+				result = (Primitive&)Float(this->getFloat() + primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result.setFloat(this->getFloat() + primitive.getInt());
+				result = (Primitive&)Float(this->getFloat() + primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result.setFloat(this->getFloat() + primitive.getLong());
+				result = (Primitive&)Float(this->getFloat() + primitive.getLong());
 				break;
 			case Type::FLOAT:
 
-				result.setFloat(this->getFloat() + primitive.getFloat());
+				result = (Primitive&)Float(this->getFloat() + primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
-				result.setFloat(this->getFloat() + primitive.getDouble());
+				result = (Primitive&)Double(this->getFloat() + primitive.getDouble());
 				break;
 			default:
 
@@ -111,33 +111,33 @@ namespace day {
 	// Subtraction
 	Primitive Float::operator-(Primitive &primitive) {
 
-		Float result;
+		Primitive result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result.setFloat(this->getFloat() - primitive.getChar());
+				result = (Primitive&)Float(this->getFloat() - primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result.setFloat(this->getFloat() - primitive.getShort());
+				result = (Primitive&)Float(this->getFloat() - primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result.setFloat(this->getFloat() - primitive.getInt());
+				result = (Primitive&)Float(this->getFloat() - primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result.setFloat(this->getFloat() - primitive.getLong());
+				result = (Primitive&)Float(this->getFloat() - primitive.getLong());
 				break;
 			case Type::FLOAT:
 
-				result.setFloat(this->getFloat() - primitive.getFloat());
+				result = (Primitive&)Float(this->getFloat() - primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
-				result.setFloat(this->getFloat() - primitive.getDouble());
+				result = (Primitive&)Double(this->getFloat() - primitive.getDouble());
 				break;
 			default:
 
@@ -156,33 +156,33 @@ namespace day {
 	// Multiplication
 	Primitive Float::operator*(Primitive &primitive) {
 
-		Float result;
+		Primitive result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result.setFloat(this->getFloat() * primitive.getChar());
+				result = (Primitive&)Float(this->getFloat() * primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result.setFloat(this->getFloat() * primitive.getShort());
+				result = (Primitive&)Float(this->getFloat() * primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result.setFloat(this->getFloat() * primitive.getInt());
+				result = (Primitive&)Float(this->getFloat() * primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result.setFloat(this->getFloat() * primitive.getLong());
+				result = (Primitive&)Float(this->getFloat() * primitive.getLong());
 				break;
 			case Type::FLOAT:
 
-				result.setFloat(this->getFloat() * primitive.getFloat());
+				result = (Primitive&)Float(this->getFloat() * primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
-				result.setFloat(this->getFloat() * primitive.getDouble());
+				result = (Primitive&)Double(this->getFloat() * primitive.getDouble());
 				break;
 			default:
 
@@ -195,33 +195,33 @@ namespace day {
 	// Division
 	Primitive Float::operator/(Primitive &primitive) {
 
-		Float result;
+		Primitive result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result.setFloat(this->getFloat() / primitive.getChar());
+				result = (Primitive&)Float(this->getFloat() / primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result.setFloat(this->getFloat() / primitive.getShort());
+				result = (Primitive&)Float(this->getFloat() / primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result.setFloat(this->getFloat() / primitive.getInt());
+				result = (Primitive&)Float(this->getFloat() / primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result.setFloat(this->getFloat() / primitive.getLong());
+				result = (Primitive&)Float(this->getFloat() / primitive.getLong());
 				break;
 			case Type::FLOAT:
 
-				result.setFloat(this->getFloat() / primitive.getFloat());
+				result = (Primitive&)Float(this->getFloat() / primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
-				result.setFloat(this->getFloat() / primitive.getDouble());
+				result = (Primitive&)Double(this->getFloat() / primitive.getDouble());
 				break;
 			default:
 
