@@ -27,6 +27,11 @@
 
 namespace day {
 
+	string Boolean::toString() {
+
+		return to_string(data);
+	}
+
 	// Assignment
 	Boolean& Boolean::operator=(Primitive &primitive) {
 
@@ -36,11 +41,6 @@ namespace day {
 			Primitive::operator=(primitive);
 
 		return *this;
-	}
-
-	string Boolean::toString() {
-
-		return to_string(data);
 	}
 
 	// Logical NOT

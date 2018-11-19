@@ -80,6 +80,7 @@ namespace day {
 
 	Primitive& Primitive::operator=(Primitive &primitive) {
 
+		// TODO: Default case for if this is type VOID
 		string message = "Assignment '=' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
 		throw new exception(message.c_str());
 	}
@@ -300,6 +301,7 @@ namespace day {
 			*this = (Primitive&)(*this / primitive);
 		} catch (exception e) {
 
+			// TODO: Correctly report divide by zero
 			string message = "Division assignment '/=' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
 			throw new exception(message.c_str());
 		}
@@ -315,6 +317,7 @@ namespace day {
 			*this = (Primitive&)(*this % primitive);
 		} catch (exception e) {
 
+			// TODO: Correctly report divide by zero
 			string message = "Modulation assignment '%=' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
 			throw new exception(message.c_str());
 		}

@@ -27,6 +27,11 @@
 
 namespace day {
 
+	string Character::toString() {
+
+		return to_string(data);
+	}
+
 	// Assignment
 	Character& Character::operator=(Primitive &primitive) {
 
@@ -62,11 +67,6 @@ namespace day {
 		};
 
 		return *this;
-	}
-
-	string Character::toString() {
-
-		return to_string(data);
 	}
 
 	// Addition
