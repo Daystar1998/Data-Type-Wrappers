@@ -115,6 +115,17 @@ namespace day {
 		Primitive operator-(Primitive &primitive) override;
 
 		/******************************************************************************
+			Function Name: operator-
+
+			Des:
+				Override unary minus operator
+
+			Returns:
+				type Primitive, the resulting value
+		******************************************************************************/
+		Primitive operator-() override;
+
+		/******************************************************************************
 			Function Name: operator*
 
 			Des:

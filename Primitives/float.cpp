@@ -147,6 +147,12 @@ namespace day {
 		return result;
 	}
 
+	// Unary minus
+	Primitive Float::operator-() {
+
+		return Float(-data);
+	}
+
 	// Multiplication
 	Primitive Float::operator*(Primitive &primitive) {
 

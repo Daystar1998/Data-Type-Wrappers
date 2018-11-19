@@ -147,6 +147,12 @@ namespace day {
 		return result;
 	}
 
+	// Unary minus
+	Primitive Short::operator-() {
+
+		return Short(-data);
+	}
+
 	// Multiplication
 	Primitive Short::operator*(Primitive &primitive) {
 

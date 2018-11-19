@@ -147,7 +147,13 @@ namespace day {
 		return result;
 	}
 
-	// Multiplication
+	// Unary minus
+	Primitive Character::operator-() {
+
+		return Character(-data);
+	}
+
+		// Multiplication
 	Primitive Character::operator*(Primitive &primitive) {
 
 		Character result;

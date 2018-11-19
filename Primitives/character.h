@@ -123,7 +123,7 @@ namespace day {
 			Returns:
 				type Primitive, the resulting value
 		******************************************************************************/
-		virtual Primitive operator-();
+		Primitive operator-() override;
 
 		/******************************************************************************
 			Function Name: operator*
