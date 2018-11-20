@@ -56,16 +56,42 @@ namespace day {
 			BOOLEAN
 		};
 
-	protected:
+	private:
 
-		const Type TYPE;
+		// type is not const because it needs to be changeable in the case where it is VOID
+		// The type of data being stored
+		Type type;
+
+		/*
+			Data
+
+			Six possible ways to do this that I am aware of.
+				1. List all possible types of data.
+					Currently this means a guaranteed size of at least 224 bits per instance. This is before adding any types such as long long and it will continue to grow with every new type supported. On the upside, it would be the easiest to implement and would be great for performance.
+				2. Union of the various types.
+					This would mean the size of every instance would always be as large as the largest supported type, which is currently long/double of 64 bits. This would lead to issues converting between the various integer types and float/double types. I currently don't know how to use unions well enough for this to be viable.
+				3. Array of unsigned chars.
+					This can be set to the exact number of bytes required so there is never an issue with memory being wasted. However, the conversion between types could be very costly performance-wise and error prone.
+				4. Have data be be stored in the specific class using that type.
+					This should overall be the best way both performance-wise and memory-wise. Unfortunately, the overriding of the assignment '=' operator prevents reassigning a child class to a generic variable of type Primitive. I have been unable to find a way to get around this issue which makes this method unusable.
+				5. Store data as a string.
+					It can be easily converted between types, but takes up more space. Specifically, 1 byte for the end character and 1 byte for each place in the number. Conversion would also give performance overhead and the included "string" file will increase the program size. "string" is a common include so this might not matter. Might be possible to implement data as bytes which would make the string the size of the data type + 1 byte.
+				6. Turn Primitive into a template class of type 'T'.
+					'T' being the data type. T would be set by the child class. This would be trivial to implement, however, this breaks the whole generic type Primitive system where a data structure full of multiple different types of Primitive could be created. With this kind of implementation it would be far cheaper and easier to just use the data types directly.
+
+				All of these will need to allow for a form of type casting where even if the incorrect data type is asked for then it would be converted and returned as that type.
+
+				1 - The memory cost is not worth it and there are better ways to do it.
+				6 - With this kind of implementation it would be far cheaper and easier to just use the data types directly.
+				4 - Potentially do-able by removing the assignment operator '=' overload and using a function for the custom assignment operations.
+		*/
 
 	public:
 
 		/******************************************************************************
 		Constructor
 		******************************************************************************/
-		Primitive(Type type = Type::VOID) : TYPE(type) {}
+		Primitive(Type type = Type::VOID) : type(type) {}
 
 		/******************************************************************************
 			Function Name: getType

@@ -29,7 +29,7 @@ namespace day {
 
 	string Float::toString() {
 
-		return to_string(data);
+		return to_string(getFloat());
 	}
 
 	// Assignment
@@ -150,7 +150,7 @@ namespace day {
 	// Unary minus
 	Primitive Float::operator-() {
 
-		return Float(-data);
+		return Float(-getFloat());
 	}
 
 	// Multiplication
@@ -252,7 +252,7 @@ namespace day {
 	// Prefix incrementation
 	Float& Float::operator++() {
 
-		this->data++;
+		setFloat(getFloat() + 1);
 
 		return *this;
 	}
@@ -269,7 +269,7 @@ namespace day {
 	// Prefix decrementation
 	Float& Float::operator--() {
 
-		this->data--;
+		setFloat(getFloat() - 1);
 
 		return *this;
 	}

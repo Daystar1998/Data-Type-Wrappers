@@ -29,7 +29,7 @@ namespace day {
 
 	string Character::toString() {
 
-		return to_string(data);
+		return to_string(getChar());
 	}
 
 	// Assignment
@@ -150,7 +150,7 @@ namespace day {
 	// Unary minus
 	Primitive Character::operator-() {
 
-		return Character(-data);
+		return Character(-getChar());
 	}
 
 		// Multiplication
@@ -295,7 +295,7 @@ namespace day {
 	// Prefix incrementation
 	Character& Character::operator++() {
 
-		this->data++;
+		setChar(getChar() + 1);
 
 		return *this;
 	}
@@ -312,7 +312,7 @@ namespace day {
 	// Prefix decrementation
 	Character& Character::operator--() {
 
-		this->data--;
+		setChar(getChar() - 1);
 
 		return *this;
 	}

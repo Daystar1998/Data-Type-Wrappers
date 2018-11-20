@@ -29,7 +29,7 @@ namespace day {
 
 	string Short::toString() {
 
-		return to_string(data);
+		return to_string(getShort());
 	}
 
 	// Assignment
@@ -150,7 +150,7 @@ namespace day {
 	// Unary minus
 	Primitive Short::operator-() {
 
-		return Short(-data);
+		return Short(-getShort());
 	}
 
 	// Multiplication
@@ -295,7 +295,7 @@ namespace day {
 	// Prefix incrementation
 	Short& Short::operator++() {
 
-		this->data++;
+		setShort(getShort() + 1);
 
 		return *this;
 	}
@@ -312,7 +312,7 @@ namespace day {
 	// Prefix decrementation
 	Short& Short::operator--() {
 
-		this->data--;
+		setShort(getShort() - 1);
 
 		return *this;
 	}

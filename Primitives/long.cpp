@@ -29,7 +29,7 @@ namespace day {
 
 	string Long::toString() {
 
-		return to_string(data);
+		return to_string(getLong());
 	}
 
 	// Assignment
@@ -150,7 +150,7 @@ namespace day {
 	// Unary minus
 	Primitive Long::operator-() {
 
-		return Long(-data);
+		return Long(-getLong());
 	}
 
 	// Multiplication
@@ -295,7 +295,7 @@ namespace day {
 	// Prefix incrementation
 	Long& Long::operator++() {
 
-		this->data++;
+		setLong(getLong() + 1);
 
 		return *this;
 	}
@@ -312,7 +312,7 @@ namespace day {
 	// Prefix decrementation
 	Long& Long::operator--() {
 
-		this->data--;
+		setLong(getLong() - 1);
 
 		return *this;
 	}

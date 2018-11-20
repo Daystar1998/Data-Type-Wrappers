@@ -29,7 +29,7 @@ namespace day {
 
 	string Integer::toString() {
 
-		return to_string(data);
+		return to_string(getInt());
 	}
 
 	// Assignment
@@ -150,7 +150,7 @@ namespace day {
 	// Unary minus
 	Primitive Integer::operator-() {
 
-		return Integer(-data);
+		return Integer(-getInt());
 	}
 
 	// Multiplication
@@ -295,7 +295,7 @@ namespace day {
 	// Prefix incrementation
 	Integer& Integer::operator++() {
 
-		this->data++;
+		setInt(getInt() + 1);
 
 		return *this;
 	}
@@ -312,7 +312,7 @@ namespace day {
 	// Prefix decrementation
 	Integer& Integer::operator--() {
 
-		this->data--;
+		setInt(getInt() - 1);
 
 		return *this;
 	}

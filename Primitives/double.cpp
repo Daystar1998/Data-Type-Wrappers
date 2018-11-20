@@ -29,7 +29,7 @@ namespace day {
 
 	string Double::toString() {
 
-		return to_string(data);
+		return to_string(getDouble());
 	}
 
 	// Assignment
@@ -150,7 +150,7 @@ namespace day {
 	// Unary minus
 	Primitive Double::operator-() {
 
-		return Double(-data);
+		return Double(-getDouble());
 	}
 
 	// Multiplication
@@ -252,7 +252,7 @@ namespace day {
 	// Prefix incrementation
 	Double& Double::operator++() {
 
-		this->data++;
+		setDouble(getDouble() + 1);
 
 		return *this;
 	}
@@ -269,7 +269,7 @@ namespace day {
 	// Prefix decrementation
 	Double& Double::operator--() {
 
-		this->data--;
+		setDouble(getDouble() - 1);
 
 		return *this;
 	}
