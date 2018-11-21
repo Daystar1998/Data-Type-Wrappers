@@ -89,7 +89,22 @@ namespace day {
 			Returns:
 				type Double &, the resulting value
 		******************************************************************************/
-		Double& operator=(Primitive &primitive) override;
+		Double& operator=(Primitive &primitive);
+
+		/******************************************************************************
+			Function Name: assignment
+
+			Des:
+				Assign the value of primitive to this
+
+			Params:
+				primitive - type Primitive &, the primitive type this is to be
+					assigned to
+
+			Returns:
+				type Double &, the resulting value
+		******************************************************************************/
+		Double& assignment(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator+
@@ -101,9 +116,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be added to
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		Primitive operator+(Primitive &primitive) override;
+		shared_ptr<Primitive> operator+(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator-
@@ -115,9 +130,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be subtracted by
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		Primitive operator-(Primitive &primitive) override;
+		shared_ptr<Primitive> operator-(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator-
@@ -140,9 +155,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be multiplied by
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		Primitive operator*(Primitive &primitive) override;
+		shared_ptr<Primitive> operator*(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator/
@@ -154,9 +169,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be divided by
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		Primitive operator/(Primitive &primitive) override;
+		shared_ptr<Primitive> operator/(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator++

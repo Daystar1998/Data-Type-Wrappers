@@ -38,9 +38,9 @@ namespace day {
 
 		switch (this->getType()) {
 
-			case Type::VOID:
+			case Type::NULLPTR:
 
-				result = "void";
+				result = "null";
 				break;
 			case Type::CHAR:
 
@@ -79,26 +79,21 @@ namespace day {
 	}
 
 	// Assignment
-	Primitive& Primitive::operator=(Primitive &primitive) {
+	Primitive& Primitive::assignment(Primitive &primitive) {
 
-		// TODO: Not working
-		this->type = primitive.getType();
-
-		return *this;
-		// TODO: Default case for if 'this' is type VOID
-		/*string message = "Assignment '=' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
-		throw new exception(message.c_str());*/
+		string message = "Assignment '=' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
+		throw new exception(message.c_str());
 	}
 
 	// Addition
-	Primitive Primitive::Primitive::operator+(Primitive &primitive) {
+	shared_ptr<Primitive> Primitive::Primitive::operator+(Primitive &primitive) {
 
 		string message = "Addition '+' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
 		throw new exception(message.c_str());
 	}
 
 	// Subtraction
-	Primitive Primitive::operator-(Primitive &primitive) {
+	shared_ptr<Primitive> Primitive::operator-(Primitive &primitive) {
 
 		string message = "Subtraction '-' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
 		throw new exception(message.c_str());
@@ -112,21 +107,21 @@ namespace day {
 	}
 
 	// Multiplication
-	Primitive Primitive::operator*(Primitive &primitive) {
+	shared_ptr<Primitive> Primitive::operator*(Primitive &primitive) {
 
 		string message = "Multiplication '*' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
 		throw new exception(message.c_str());
 	}
 
 	// Division
-	Primitive Primitive::operator/(Primitive &primitive) {
+	shared_ptr<Primitive> Primitive::operator/(Primitive &primitive) {
 
 		string message = "Division '/' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
 		throw new exception(message.c_str());
 	}
 
 	// Modulation
-	Primitive Primitive::operator%(Primitive &primitive) {
+	shared_ptr<Primitive> Primitive::operator%(Primitive &primitive) {
 
 		string message = "Modulation '%' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
 		throw new exception(message.c_str());
@@ -161,14 +156,14 @@ namespace day {
 	}
 
 	// Bitwise OR
-	Primitive Primitive::operator|(Primitive &primitive) {
+	shared_ptr<Primitive> Primitive::operator|(Primitive &primitive) {
 
 		string message = "Bitwise OR '|' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
 		throw new exception(message.c_str());
 	}
 
 	// Bitwise AND
-	Primitive Primitive::operator&(Primitive &primitive) {
+	shared_ptr<Primitive> Primitive::operator&(Primitive &primitive) {
 
 		string message = "Bitwise AND '&' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
 		throw new exception(message.c_str());
@@ -182,21 +177,21 @@ namespace day {
 	}
 
 	// Bitwise XOR
-	Primitive Primitive::operator^(Primitive &primitive) {
+	shared_ptr<Primitive> Primitive::operator^(Primitive &primitive) {
 
 		string message = "Bitwise XOR '^' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
 		throw new exception(message.c_str());
 	}
 
 	// Bitwise left shift
-	Primitive Primitive::operator<<(Primitive &primitive) {
+	shared_ptr<Primitive> Primitive::operator<<(Primitive &primitive) {
 
 		string message = "Bitwise left shift '<<' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
 		throw new exception(message.c_str());
 	}
 
 	// Bitwise right shift
-	Primitive Primitive::operator>>(Primitive &primitive) {
+	shared_ptr<Primitive> Primitive::operator>>(Primitive &primitive) {
 
 		string message = "Bitwise right shift '>>' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
 		throw new exception(message.c_str());
@@ -249,7 +244,7 @@ namespace day {
 
 		try {
 
-			*this = (Primitive&)(*this + primitive);
+			this->assignment(*(*this + primitive));
 		} catch (exception e) {
 
 			string message = "Addition assignment '+=' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
@@ -264,7 +259,7 @@ namespace day {
 
 		try {
 
-			*this = (Primitive&)(*this - primitive);
+			this->assignment(*(*this - primitive));
 		} catch (exception e) {
 
 			string message = "Subtraction assignment '-=' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
@@ -279,7 +274,7 @@ namespace day {
 
 		try {
 
-			*this = (Primitive&)(*this * primitive);
+			this->assignment(*(*this * primitive));
 		} catch (exception e) {
 
 			string message = "Multiplication assignment '*=' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
@@ -294,7 +289,7 @@ namespace day {
 
 		try {
 
-			*this = (Primitive&)(*this / primitive);
+			this->assignment(*(*this / primitive));
 		} catch (DivideByZeroException e) {
 
 			throw e;
@@ -312,7 +307,7 @@ namespace day {
 
 		try {
 
-			*this = (Primitive&)(*this % primitive);
+			this->assignment(*(*this % primitive));
 		} catch (DivideByZeroException e) {
 
 			throw e;
@@ -330,7 +325,7 @@ namespace day {
 
 		try {
 
-			*this = (Primitive&)(*this & primitive);
+			this->assignment(*(*this & primitive));
 		} catch (exception e) {
 
 			string message = "Bitwise AND assignment '&=' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
@@ -345,7 +340,7 @@ namespace day {
 
 		try {
 
-			*this = (Primitive&)(*this | primitive);
+			this->assignment(*(*this | primitive));
 		} catch (exception e) {
 
 			string message = "Bitwise OR assignment '|=' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
@@ -360,7 +355,7 @@ namespace day {
 
 		try {
 
-			*this = (Primitive&)(*this ^ primitive);
+			this->assignment(*(*this ^ primitive));
 		} catch (exception e) {
 
 			string message = "Bitwise XOR assignment '^=' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
@@ -375,7 +370,7 @@ namespace day {
 
 		try {
 
-			*this = (Primitive&)(*this << primitive);
+			this->assignment(*(*this << primitive));
 		} catch (exception e) {
 
 			string message = "Bitwise shift left assignment '<<=' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";
@@ -390,7 +385,7 @@ namespace day {
 
 		try {
 
-			*this = (Primitive&)(*this >> primitive);
+			this->assignment(*(*this >> primitive));
 		} catch (exception e) {
 
 			string message = "Bitwise shift right assignment '>>=' operation between type " + this->typeName() + " and type " + primitive.typeName() + " is not supported";

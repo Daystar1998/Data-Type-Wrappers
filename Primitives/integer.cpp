@@ -35,6 +35,14 @@ namespace day {
 	// Assignment
 	Integer& Integer::operator=(Primitive &primitive) {
 
+		this->assignment(primitive);
+
+		return *this;
+	}
+
+	// Assignment
+	Integer& Integer::assignment(Primitive &primitive) {
+
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
@@ -70,78 +78,78 @@ namespace day {
 	}
 
 	// Addition
-	Primitive Integer::operator+(Primitive &primitive) {
+	shared_ptr<Primitive> Integer::operator+(Primitive &primitive) {
 
-		Primitive result;
+		shared_ptr<Primitive> result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result = (Primitive&)Integer(this->getInt() + primitive.getChar());
+				result = make_shared<Integer>(this->getInt() + primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result = (Primitive&)Integer(this->getInt() + primitive.getShort());
+				result = make_shared<Integer>(this->getInt() + primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result = (Primitive&)Integer(this->getInt() + primitive.getInt());
+				result = make_shared<Integer>(this->getInt() + primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result = (Primitive&)Long(this->getInt() + primitive.getLong());
+				result = make_shared<Long>(this->getInt() + primitive.getLong());
 				break;
 			case Type::FLOAT:
 
-				result = (Primitive&)Float(this->getInt() + primitive.getFloat());
+				result = make_shared<Float>(this->getInt() + primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
-				result = (Primitive&)Double(this->getInt() + primitive.getDouble());
+				result = make_shared<Double>(this->getInt() + primitive.getDouble());
 				break;
 			default:
 
-				Primitive::operator+(primitive);
+				result = Primitive::operator+(primitive);
 		};
 
 		return result;
 	}
 
 	// Subtraction
-	Primitive Integer::operator-(Primitive &primitive) {
+	shared_ptr<Primitive> Integer::operator-(Primitive &primitive) {
 
-		Primitive result;
+		shared_ptr<Primitive> result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result = (Primitive&)Integer(this->getInt() - primitive.getChar());
+				result = make_shared<Integer>(this->getInt() - primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result = (Primitive&)Integer(this->getInt() - primitive.getShort());
+				result = make_shared<Integer>(this->getInt() - primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result = (Primitive&)Integer(this->getInt() - primitive.getInt());
+				result = make_shared<Integer>(this->getInt() - primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result = (Primitive&)Long(this->getInt() - primitive.getLong());
+				result = make_shared<Long>(this->getInt() - primitive.getLong());
 				break;
 			case Type::FLOAT:
 
-				result = (Primitive&)Float(this->getInt() - primitive.getFloat());
+				result = make_shared<Float>(this->getInt() - primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
-				result = (Primitive&)Double(this->getInt() - primitive.getDouble());
+				result = make_shared<Double>(this->getInt() - primitive.getDouble());
 				break;
 			default:
 
-				Primitive::operator-(primitive);
+				result = Primitive::operator-(primitive);
 		};
 
 		return result;
@@ -154,48 +162,48 @@ namespace day {
 	}
 
 	// Multiplication
-	Primitive Integer::operator*(Primitive &primitive) {
+	shared_ptr<Primitive> Integer::operator*(Primitive &primitive) {
 
-		Primitive result;
+		shared_ptr<Primitive> result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result = (Primitive&)Integer(this->getInt() * primitive.getChar());
+				result = make_shared<Integer>(this->getInt() * primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result = (Primitive&)Integer(this->getInt() * primitive.getShort());
+				result = make_shared<Integer>(this->getInt() * primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result = (Primitive&)Integer(this->getInt() * primitive.getInt());
+				result = make_shared<Integer>(this->getInt() * primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result = (Primitive&)Long(this->getInt() * primitive.getLong());
+				result = make_shared<Long>(this->getInt() * primitive.getLong());
 				break;
 			case Type::FLOAT:
 
-				result = (Primitive&)Float(this->getInt() * primitive.getFloat());
+				result = make_shared<Float>(this->getInt() * primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
-				result = (Primitive&)Double(this->getInt() * primitive.getDouble());
+				result = make_shared<Double>(this->getInt() * primitive.getDouble());
 				break;
 			default:
 
-				Primitive::operator*(primitive);
+				result = Primitive::operator*(primitive);
 		};
 
 		return result;
 	}
 
 	// Division
-	Primitive Integer::operator/(Primitive &primitive) {
+	shared_ptr<Primitive> Integer::operator/(Primitive &primitive) {
 
-		Primitive result;
+		shared_ptr<Primitive> result;
 
 		switch (primitive.getType()) {
 
@@ -204,55 +212,55 @@ namespace day {
 				if (primitive.getChar() == 0)
 					throw new DivideByZeroException();
 
-				result = (Primitive&)Integer(this->getInt() / primitive.getChar());
+				result = make_shared<Integer>(this->getInt() / primitive.getChar());
 				break;
 			case Type::SHORT:
 
 				if (primitive.getShort() == 0)
 					throw new DivideByZeroException();
 
-				result = (Primitive&)Integer(this->getInt() / primitive.getShort());
+				result = make_shared<Integer>(this->getInt() / primitive.getShort());
 				break;
 			case Type::INTEGER:
 
 				if (primitive.getInt() == 0)
 					throw new DivideByZeroException();
 
-				result = (Primitive&)Integer(this->getInt() / primitive.getInt());
+				result = make_shared<Integer>(this->getInt() / primitive.getInt());
 				break;
 			case Type::LONG:
 
 				if (primitive.getLong() == 0)
 					throw new DivideByZeroException();
 
-				result = (Primitive&)Long(this->getInt() / primitive.getLong());
+				result = make_shared<Long>(this->getInt() / primitive.getLong());
 				break;
 			case Type::FLOAT:
 
 				if (primitive.getFloat() == 0)
 					throw new DivideByZeroException();
 
-				result = (Primitive&)Float(this->getInt() / primitive.getFloat());
+				result = make_shared<Float>(this->getInt() / primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
 				if (primitive.getDouble() == 0)
 					throw new DivideByZeroException();
 
-				result = (Primitive&)Double(this->getInt() / primitive.getDouble());
+				result = make_shared<Double>(this->getInt() / primitive.getDouble());
 				break;
 			default:
 
-				Primitive::operator/(primitive);
+				result = Primitive::operator/(primitive);
 		};
 
 		return result;
 	}
 
 	// Modulation
-	Primitive Integer::operator%(Primitive &primitive) {
+	shared_ptr<Primitive> Integer::operator%(Primitive &primitive) {
 
-		Primitive result;
+		shared_ptr<Primitive> result;
 
 		switch (primitive.getType()) {
 
@@ -261,32 +269,32 @@ namespace day {
 				if (primitive.getChar() == 0)
 					throw new DivideByZeroException();
 
-				result = (Primitive&)Integer(this->getInt() % primitive.getChar());
+				result = make_shared<Integer>(this->getInt() % primitive.getChar());
 				break;
 			case Type::SHORT:
 
 				if (primitive.getShort() == 0)
 					throw new DivideByZeroException();
 
-				result = (Primitive&)Integer(this->getInt() % primitive.getShort());
+				result = make_shared<Integer>(this->getInt() % primitive.getShort());
 				break;
 			case Type::INTEGER:
 
 				if (primitive.getInt() == 0)
 					throw new DivideByZeroException();
 
-				result = (Primitive&)Integer(this->getInt() % primitive.getInt());
+				result = make_shared<Integer>(this->getInt() % primitive.getInt());
 				break;
 			case Type::LONG:
 
 				if (primitive.getLong() == 0)
 					throw new DivideByZeroException();
 
-				result = (Primitive&)Long(this->getInt() % primitive.getLong());
+				result = make_shared<Long>(this->getInt() % primitive.getLong());
 				break;
 			default:
 
-				Primitive::operator%(primitive);
+				result = Primitive::operator%(primitive);
 		};
 
 		return result;
@@ -327,62 +335,62 @@ namespace day {
 	}
 
 	// Bitwise OR
-	Primitive Integer::operator|(Primitive &primitive) {
+	shared_ptr<Primitive> Integer::operator|(Primitive &primitive) {
 
-		Primitive result;
+		shared_ptr<Primitive> result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result = (Primitive&)Integer(this->getInt() | primitive.getChar());
+				result = make_shared<Integer>(this->getInt() | primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result = (Primitive&)Integer(this->getInt() | primitive.getShort());
+				result = make_shared<Integer>(this->getInt() | primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result = (Primitive&)Integer(this->getInt() | primitive.getInt());
+				result = make_shared<Integer>(this->getInt() | primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result = (Primitive&)Long(this->getInt() | primitive.getLong());
+				result = make_shared<Long>(this->getInt() | primitive.getLong());
 				break;
 			default:
 
-				Primitive::operator|(primitive);
+				result = Primitive::operator|(primitive);
 		};
 
 		return result;
 	}
 
 	// Bitwise AND
-	Primitive Integer::operator&(Primitive &primitive) {
+	shared_ptr<Primitive> Integer::operator&(Primitive &primitive) {
 
-		Primitive result;
+		shared_ptr<Primitive> result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result = (Primitive&)Integer(this->getInt() & primitive.getChar());
+				result = make_shared<Integer>(this->getInt() & primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result = (Primitive&)Integer(this->getInt() & primitive.getShort());
+				result = make_shared<Integer>(this->getInt() & primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result = (Primitive&)Integer(this->getInt() & primitive.getInt());
+				result = make_shared<Integer>(this->getInt() & primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result = (Primitive&)Long(this->getInt() & primitive.getLong());
+				result = make_shared<Long>(this->getInt() & primitive.getLong());
 				break;
 			default:
 
-				Primitive::operator&(primitive);
+				result = Primitive::operator&(primitive);
 		};
 
 		return result;
@@ -399,93 +407,93 @@ namespace day {
 	}
 
 	// Bitwise XOR
-	Primitive Integer::operator^(Primitive &primitive) {
+	shared_ptr<Primitive> Integer::operator^(Primitive &primitive) {
 
-		Primitive result;
+		shared_ptr<Primitive> result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result = (Primitive&)Integer(this->getInt() ^ primitive.getChar());
+				result = make_shared<Integer>(this->getInt() ^ primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result = (Primitive&)Integer(this->getInt() ^ primitive.getShort());
+				result = make_shared<Integer>(this->getInt() ^ primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result = (Primitive&)Integer(this->getInt() ^ primitive.getInt());
+				result = make_shared<Integer>(this->getInt() ^ primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result = (Primitive&)Long(this->getInt() ^ primitive.getLong());
+				result = make_shared<Long>(this->getInt() ^ primitive.getLong());
 				break;
 			default:
 
-				Primitive::operator^(primitive);
+				result = Primitive::operator^(primitive);
 		};
 
 		return result;
 	}
 
 	// Bitwise left shift
-	Primitive Integer::operator<<(Primitive &primitive) {
+	shared_ptr<Primitive> Integer::operator<<(Primitive &primitive) {
 
-		Primitive result;
+		shared_ptr<Primitive> result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result = (Primitive&)Integer(this->getInt() << primitive.getChar());
+				result = make_shared<Integer>(this->getInt() << primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result = (Primitive&)Integer(this->getInt() << primitive.getShort());
+				result = make_shared<Integer>(this->getInt() << primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result = (Primitive&)Integer(this->getInt() << primitive.getInt());
+				result = make_shared<Integer>(this->getInt() << primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result = (Primitive&)Long(this->getInt() << primitive.getLong());
+				result = make_shared<Long>(this->getInt() << primitive.getLong());
 				break;
 			default:
 
-				Primitive::operator<<(primitive);
+				result = Primitive::operator<<(primitive);
 		};
 
 		return result;
 	}
 
 	// Bitwise right shift
-	Primitive Integer::operator>>(Primitive &primitive) {
+	shared_ptr<Primitive> Integer::operator>>(Primitive &primitive) {
 
-		Primitive result;
+		shared_ptr<Primitive> result;
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result = (Primitive&)Integer(this->getInt() >> primitive.getChar());
+				result = make_shared<Integer>(this->getInt() >> primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result = (Primitive&)Integer(this->getInt() >> primitive.getShort());
+				result = make_shared<Integer>(this->getInt() >> primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result = (Primitive&)Integer(this->getInt() >> primitive.getInt());
+				result = make_shared<Integer>(this->getInt() >> primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result = (Primitive&)Long(this->getInt() >> primitive.getLong());
+				result = make_shared<Long>(this->getInt() >> primitive.getLong());
 				break;
 			default:
 
-				Primitive::operator>>(primitive);
+				result = Primitive::operator>>(primitive);
 		};
 
 		return result;

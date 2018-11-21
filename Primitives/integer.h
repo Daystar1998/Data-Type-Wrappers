@@ -89,7 +89,22 @@ namespace day {
 			Returns:
 				type Integer &, the resulting value
 		******************************************************************************/
-		Integer& operator=(Primitive &primitive) override;
+		Integer& operator=(Primitive &primitive);
+
+		/******************************************************************************
+			Function Name: assignment
+
+			Des:
+				Assign the value of primitive to this
+
+			Params:
+				primitive - type Primitive &, the primitive type this is to be
+					assigned to
+
+			Returns:
+				type Integer &, the resulting value
+		******************************************************************************/
+		Integer& assignment(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator+
@@ -101,9 +116,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be added to
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		Primitive operator+(Primitive &primitive) override;
+		shared_ptr<Primitive> operator+(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator-
@@ -115,9 +130,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be subtracted by
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		Primitive operator-(Primitive &primitive) override;
+		shared_ptr<Primitive> operator-(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator-
@@ -140,9 +155,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be multiplied by
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		Primitive operator*(Primitive &primitive) override;
+		shared_ptr<Primitive> operator*(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator/
@@ -154,9 +169,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be divided by
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		Primitive operator/(Primitive &primitive) override;
+		shared_ptr<Primitive> operator/(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator%
@@ -168,9 +183,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be modulated by
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		Primitive operator%(Primitive &primitive) override;
+		shared_ptr<Primitive> operator%(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator++
@@ -230,9 +245,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be bitwise OR'd by
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		Primitive operator|(Primitive &primitive) override;
+		shared_ptr<Primitive> operator|(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator&
@@ -244,9 +259,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be bitwise AND'd by
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		Primitive operator&(Primitive &primitive) override;
+		shared_ptr<Primitive> operator&(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator~
@@ -269,9 +284,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be bitwise XOR'd by
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		Primitive operator^(Primitive &primitive) override;
+		shared_ptr<Primitive> operator^(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator<<
@@ -283,9 +298,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be shifted by
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		Primitive operator<<(Primitive &primitive) override;
+		shared_ptr<Primitive> operator<<(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator>>
@@ -297,9 +312,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be shifted by
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		Primitive operator>>(Primitive &primitive) override;
+		shared_ptr<Primitive> operator>>(Primitive &primitive) override;
 
 		/******************************************************************************
 			Comparison operators

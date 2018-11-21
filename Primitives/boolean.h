@@ -83,7 +83,7 @@ namespace day {
 			Returns:
 				type Boolean &, the resulting value
 		******************************************************************************/
-		Boolean& operator=(Primitive &primitive) override;
+		Boolean& operator=(Primitive &primitive);
 
 		/******************************************************************************
 			Logic Operators
