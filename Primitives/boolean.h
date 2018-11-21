@@ -39,7 +39,7 @@ namespace day {
 	public:
 
 		/******************************************************************************
-		Constructor
+			Constructor
 		******************************************************************************/
 		Boolean(bool data = false) : Primitive(Type::BOOLEAN), data(data) {}
 
@@ -54,13 +54,29 @@ namespace day {
 		******************************************************************************/
 		string toString() override;
 
-		// Getter
+		/******************************************************************************
+			Function Name: getBool
+
+			Des:
+				Get the data as a bool
+
+			Returns:
+				type bool, the data as a bool
+		******************************************************************************/
 		inline bool getBool() override {
 
 			return data;
 		}
 
-		// Setter
+		/******************************************************************************
+			Function Name: setBool
+
+			Des:
+				Setter for data
+
+			Param:
+				data - type bool, the new value for the data
+		******************************************************************************/
 		inline void setBool(bool data) override {
 
 			this->data = data;

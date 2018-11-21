@@ -45,7 +45,7 @@ namespace day {
 	public:
 
 		/******************************************************************************
-		Constructor
+			Constructor
 		******************************************************************************/
 		Double(double data = 0) : Primitive(Type::DOUBLE), data(data) {}
 
@@ -60,13 +60,99 @@ namespace day {
 		******************************************************************************/
 		string toString() override;
 
-		// Getter
+		/******************************************************************************
+			Function Name: getChar
+
+			Des:
+				Get the data as a char
+
+			Returns:
+				type char, the data as a char
+		******************************************************************************/
+		inline char getChar() override {
+
+			return (char)data;
+		}
+
+		/******************************************************************************
+			Function Name: getShort
+
+			Des:
+				Get the data as a short
+
+			Returns:
+				type short, the data as a short
+		******************************************************************************/
+		inline short getShort() override {
+
+			return (short)data;
+		}
+
+		/******************************************************************************
+			Function Name: getInt
+
+			Des:
+				Get the data as an int
+
+			Returns:
+				type int, the data as an int
+		******************************************************************************/
+		inline int getInt() override {
+
+			return (int)data;
+		}
+
+		/******************************************************************************
+			Function Name: getLong
+
+			Des:
+				Get the data as a long
+
+			Returns:
+				type long, the data as a long
+		******************************************************************************/
+		inline long getLong() override {
+
+			return (long)data;
+		}
+
+		/******************************************************************************
+			Function Name: getFloat
+
+			Des:
+				Get the data as a float
+
+			Returns:
+				type float, the data as a float
+		******************************************************************************/
+		inline float getFloat() override {
+
+			return (float)data;
+		}
+
+		/******************************************************************************
+			Function Name: getDouble
+
+			Des:
+				Get the data as a double
+
+			Returns:
+				type double, the data as a double
+		******************************************************************************/
 		inline double getDouble() override {
 
 			return data;
 		}
 
-		// Setter
+		/******************************************************************************
+			Function Name: setDouble
+
+			Des:
+				Setter for data
+
+			Param:
+				data - type double, the new value for the data
+		******************************************************************************/
 		inline void setDouble(double data) override {
 
 			this->data = data;
