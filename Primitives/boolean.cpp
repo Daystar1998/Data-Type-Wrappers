@@ -38,7 +38,7 @@ namespace day {
 		if (primitive.getType() == Type::BOOLEAN)
 			this->setBool(primitive.getBool());
 		else
-			Primitive::operator=(primitive);
+			Primitive::assignment(primitive);
 
 		return *this;
 	}

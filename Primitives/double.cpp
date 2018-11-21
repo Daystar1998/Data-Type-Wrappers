@@ -43,36 +43,7 @@ namespace day {
 	// Assignment
 	Double& Double::assignment(Primitive &primitive) {
 
-		switch (primitive.getType()) {
-
-			case Type::CHAR:
-
-				this->setDouble(primitive.getChar());
-				break;
-			case Type::SHORT:
-
-				this->setDouble(primitive.getShort());
-				break;
-			case Type::INTEGER:
-
-				this->setDouble(primitive.getInt());
-				break;
-			case Type::LONG:
-
-				this->setDouble(primitive.getLong());
-				break;
-			case Type::FLOAT:
-
-				this->setDouble(primitive.getFloat());
-				break;
-			case Type::DOUBLE:
-
-				this->setDouble(primitive.getDouble());
-				break;
-			default:
-
-				Primitive::operator=(primitive);
-		};
+		this->setDouble(primitive.getDouble());
 
 		return *this;
 	}
