@@ -61,7 +61,7 @@ namespace day {
 	private:
 
 		// The type of data being stored
-		const Type type;
+		const Type TYPE;
 
 		/*
 			Data
@@ -112,7 +112,7 @@ namespace day {
 		/******************************************************************************
 			Constructor
 		******************************************************************************/
-		Primitive(Type type = Type::NULLPTR) : type(type) {}
+		Primitive(Type type = Type::NULLPTR) : TYPE(type) {}
 
 		/******************************************************************************
 			Function Name: getType
@@ -318,9 +318,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be subtracted by
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		virtual Primitive operator-();
+		virtual shared_ptr<Primitive> operator-();
 
 		/******************************************************************************
 			Function Name: operator*
@@ -382,9 +382,9 @@ namespace day {
 				Override postfix increment operator
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		virtual Primitive operator++(int);
+		virtual shared_ptr<Primitive> operator++(int);
 
 		/******************************************************************************
 			Function Name: operator--
@@ -404,9 +404,9 @@ namespace day {
 				Override postfix decrement operator
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		virtual Primitive operator--(int);
+		virtual shared_ptr<Primitive> operator--(int);
 
 		/******************************************************************************
 			Bitwise operators
@@ -447,9 +447,9 @@ namespace day {
 				Override bitwise NOT operator
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		virtual Primitive operator~();
+		virtual shared_ptr<Primitive> operator~();
 
 		/******************************************************************************
 			Function Name: operator^
@@ -507,9 +507,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		virtual Primitive operator==(Primitive &primitive);
+		virtual shared_ptr<Primitive> operator==(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator!=
@@ -521,9 +521,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		virtual Primitive operator!=(Primitive &primitive);
+		virtual shared_ptr<Primitive> operator!=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator>
@@ -535,9 +535,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		virtual Primitive operator>(Primitive &primitive);
+		virtual shared_ptr<Primitive> operator>(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator<
@@ -549,9 +549,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		virtual Primitive operator<(Primitive &primitive);
+		virtual shared_ptr<Primitive> operator<(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator>=
@@ -563,9 +563,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		virtual Primitive operator>=(Primitive &primitive);
+		virtual shared_ptr<Primitive> operator>=(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator<=
@@ -577,9 +577,9 @@ namespace day {
 				primitive - type Primitive &, the primitive type to be compared to
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		virtual Primitive operator<=(Primitive &primitive);
+		virtual shared_ptr<Primitive> operator<=(Primitive &primitive);
 
 		/******************************************************************************
 			Compound assignment operators
@@ -736,9 +736,9 @@ namespace day {
 				Override logical NOT operator
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		virtual Primitive operator!();
+		virtual shared_ptr<Primitive> operator!();
 
 		/******************************************************************************
 			Function Name: operator&&
@@ -750,9 +750,9 @@ namespace day {
 				primitive - type Primitive &, the value to be compared to
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		virtual Primitive operator&&(Primitive &primitive);
+		virtual shared_ptr<Primitive> operator&&(Primitive &primitive);
 
 		/******************************************************************************
 			Function Name: operator||
@@ -764,8 +764,8 @@ namespace day {
 				primitive - type Primitive &, the value to be compared to
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		virtual Primitive operator||(Primitive &primitive);
+		virtual shared_ptr<Primitive> operator||(Primitive &primitive);
 	};
 }

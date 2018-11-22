@@ -127,9 +127,9 @@ namespace day {
 	}
 
 	// Unary minus
-	Primitive Double::operator-() {
+	shared_ptr<Primitive> Double::operator-() {
 
-		return Double(-getDouble());
+		return make_shared<Double>(-getDouble());
 	}
 
 	// Multiplication
@@ -237,9 +237,9 @@ namespace day {
 	}
 
 	// Postfix incrementation
-	Primitive Double::operator++(int) {
+	shared_ptr<Primitive> Double::operator++(int) {
 
-		Double result(this->getDouble());
+		shared_ptr<Primitive> result = make_shared<Double>(this->getDouble());
 		++*this;
 
 		return result;
@@ -254,46 +254,46 @@ namespace day {
 	}
 
 	// Postfix decrementation
-	Primitive Double::operator--(int) {
+	shared_ptr<Primitive> Double::operator--(int) {
 
-		Double result(this->getDouble());
+		shared_ptr<Primitive> result = make_shared<Double>(this->getDouble());
 		--*this;
 
 		return result;
 	}
 
 	// Equal to
-	Primitive Double::operator==(Primitive &primitive) {
+	shared_ptr<Primitive> Double::operator==(Primitive &primitive) {
 
-		Boolean result;
+		shared_ptr<Primitive> result = make_shared<Boolean>();
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result.setBool(this->getDouble() == primitive.getChar());
+				result->setBool(this->getDouble() == primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result.setBool(this->getDouble() == primitive.getShort());
+				result->setBool(this->getDouble() == primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result.setBool(this->getDouble() == primitive.getInt());
+				result->setBool(this->getDouble() == primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result.setBool(this->getDouble() == primitive.getLong());
+				result->setBool(this->getDouble() == primitive.getLong());
 				break;
 			case Type::FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result.setBool(this->getDouble() == primitive.getFloat());
+				result->setBool(this->getDouble() == primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result.setBool(this->getDouble() == primitive.getDouble());
+				result->setBool(this->getDouble() == primitive.getDouble());
 				break;
 			default:
 
@@ -304,37 +304,37 @@ namespace day {
 	}
 
 	// Not equal to
-	Primitive Double::operator!=(Primitive &primitive) {
+	shared_ptr<Primitive> Double::operator!=(Primitive &primitive) {
 
-		Boolean result;
+		shared_ptr<Primitive> result = make_shared<Boolean>();
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result.setBool(this->getDouble() != primitive.getChar());
+				result->setBool(this->getDouble() != primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result.setBool(this->getDouble() != primitive.getShort());
+				result->setBool(this->getDouble() != primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result.setBool(this->getDouble() != primitive.getInt());
+				result->setBool(this->getDouble() != primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result.setBool(this->getDouble() != primitive.getLong());
+				result->setBool(this->getDouble() != primitive.getLong());
 				break;
 			case Type::FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result.setBool(this->getDouble() != primitive.getFloat());
+				result->setBool(this->getDouble() != primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result.setBool(this->getDouble() != primitive.getDouble());
+				result->setBool(this->getDouble() != primitive.getDouble());
 				break;
 			default:
 
@@ -345,37 +345,37 @@ namespace day {
 	}
 
 	// Greater than
-	Primitive Double::operator>(Primitive &primitive) {
+	shared_ptr<Primitive> Double::operator>(Primitive &primitive) {
 
-		Boolean result;
+		shared_ptr<Primitive> result = make_shared<Boolean>();
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result.setBool(this->getDouble() > primitive.getChar());
+				result->setBool(this->getDouble() > primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result.setBool(this->getDouble() > primitive.getShort());
+				result->setBool(this->getDouble() > primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result.setBool(this->getDouble() > primitive.getInt());
+				result->setBool(this->getDouble() > primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result.setBool(this->getDouble() > primitive.getLong());
+				result->setBool(this->getDouble() > primitive.getLong());
 				break;
 			case Type::FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result.setBool(this->getDouble() > primitive.getFloat());
+				result->setBool(this->getDouble() > primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result.setBool(this->getDouble() > primitive.getDouble());
+				result->setBool(this->getDouble() > primitive.getDouble());
 				break;
 			default:
 
@@ -386,37 +386,37 @@ namespace day {
 	}
 
 	// Less than
-	Primitive Double::operator<(Primitive &primitive) {
+	shared_ptr<Primitive> Double::operator<(Primitive &primitive) {
 
-		Boolean result;
+		shared_ptr<Primitive> result = make_shared<Boolean>();
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result.setBool(this->getDouble() < primitive.getChar());
+				result->setBool(this->getDouble() < primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result.setBool(this->getDouble() < primitive.getShort());
+				result->setBool(this->getDouble() < primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result.setBool(this->getDouble() < primitive.getInt());
+				result->setBool(this->getDouble() < primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result.setBool(this->getDouble() < primitive.getLong());
+				result->setBool(this->getDouble() < primitive.getLong());
 				break;
 			case Type::FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result.setBool(this->getDouble() < primitive.getFloat());
+				result->setBool(this->getDouble() < primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result.setBool(this->getDouble() < primitive.getDouble());
+				result->setBool(this->getDouble() < primitive.getDouble());
 				break;
 			default:
 
@@ -427,37 +427,37 @@ namespace day {
 	}
 
 	// Greater than or equal to
-	Primitive Double::operator>=(Primitive &primitive) {
+	shared_ptr<Primitive> Double::operator>=(Primitive &primitive) {
 
-		Boolean result;
+		shared_ptr<Primitive> result = make_shared<Boolean>();
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result.setBool(this->getDouble() >= primitive.getChar());
+				result->setBool(this->getDouble() >= primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result.setBool(this->getDouble() >= primitive.getShort());
+				result->setBool(this->getDouble() >= primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result.setBool(this->getDouble() >= primitive.getInt());
+				result->setBool(this->getDouble() >= primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result.setBool(this->getDouble() >= primitive.getLong());
+				result->setBool(this->getDouble() >= primitive.getLong());
 				break;
 			case Type::FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result.setBool(this->getDouble() >= primitive.getFloat());
+				result->setBool(this->getDouble() >= primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result.setBool(this->getDouble() >= primitive.getDouble());
+				result->setBool(this->getDouble() >= primitive.getDouble());
 				break;
 			default:
 
@@ -468,37 +468,37 @@ namespace day {
 	}
 
 	// Less than or equal to
-	Primitive Double::operator<=(Primitive &primitive) {
+	shared_ptr<Primitive> Double::operator<=(Primitive &primitive) {
 
-		Boolean result;
+		shared_ptr<Primitive> result = make_shared<Boolean>();
 
 		switch (primitive.getType()) {
 
 			case Type::CHAR:
 
-				result.setBool(this->getDouble() <= primitive.getChar());
+				result->setBool(this->getDouble() <= primitive.getChar());
 				break;
 			case Type::SHORT:
 
-				result.setBool(this->getDouble() <= primitive.getShort());
+				result->setBool(this->getDouble() <= primitive.getShort());
 				break;
 			case Type::INTEGER:
 
-				result.setBool(this->getDouble() <= primitive.getInt());
+				result->setBool(this->getDouble() <= primitive.getInt());
 				break;
 			case Type::LONG:
 
-				result.setBool(this->getDouble() <= primitive.getLong());
+				result->setBool(this->getDouble() <= primitive.getLong());
 				break;
 			case Type::FLOAT:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result.setBool(this->getDouble() <= primitive.getFloat());
+				result->setBool(this->getDouble() <= primitive.getFloat());
 				break;
 			case Type::DOUBLE:
 
 				// TODO: Test if this is possible with the issues caused by it's precision
-				result.setBool(this->getDouble() <= primitive.getDouble());
+				result->setBool(this->getDouble() <= primitive.getDouble());
 				break;
 			default:
 

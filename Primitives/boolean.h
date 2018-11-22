@@ -112,9 +112,9 @@ namespace day {
 				Override logical NOT operator
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		Primitive operator!() override;
+		shared_ptr<Primitive> operator!() override;
 
 		/******************************************************************************
 			Function Name: operator&&
@@ -126,9 +126,9 @@ namespace day {
 				primitive - type Primitive &, the value to be compared to
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		Primitive operator&&(Primitive &primitive) override;
+		shared_ptr<Primitive> operator&&(Primitive &primitive) override;
 
 		/******************************************************************************
 			Function Name: operator||
@@ -140,8 +140,8 @@ namespace day {
 				primitive - type Primitive &, the value to be compared to
 
 			Returns:
-				type Primitive, the resulting value
+				type shared_ptr<Primitive>, the resulting value
 		******************************************************************************/
-		Primitive operator||(Primitive &primitive) override;
+		shared_ptr<Primitive> operator||(Primitive &primitive) override;
 	};
 }
