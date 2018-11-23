@@ -198,7 +198,7 @@ void runShortTests() {
 		Postfix Incrementation Tests
 	******************************************************************************/
 
-	char tmp = primitive->getShort();
+	short tmp = primitive->getShort();
 
 	if (tmp == ((*primitive)++)->getShort()) {
 

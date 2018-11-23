@@ -198,7 +198,7 @@ void runIntTests() {
 		Postfix Incrementation Tests
 	******************************************************************************/
 
-	char tmp = primitive->getInt();
+	int tmp = primitive->getInt();
 
 	if (tmp == ((*primitive)++)->getInt()) {
 

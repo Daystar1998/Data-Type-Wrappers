@@ -198,7 +198,7 @@ void runLongTests() {
 		Postfix Incrementation Tests
 	******************************************************************************/
 
-	char tmp = primitive->getLong();
+	long tmp = primitive->getLong();
 
 	if (tmp == ((*primitive)++)->getLong()) {
 
