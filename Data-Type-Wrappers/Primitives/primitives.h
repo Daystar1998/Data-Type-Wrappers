@@ -145,7 +145,10 @@ namespace day {
 			Returns:
 				type string, the value as a string
 		******************************************************************************/
-		virtual string toString() { throw new exception("ToString has not been written yet"); };
+		virtual string toString() { 
+		
+			return "null";
+		};
 
 		/******************************************************************************
 			Function Name: getChar
