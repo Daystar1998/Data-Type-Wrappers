@@ -29,7 +29,8 @@ namespace day {
 
 	string Character::toString() {
 
-		return to_string(getChar());
+		// Ensure this returns an ASCII character rather than a number
+		return string(1, getChar());
 	}
 
 	// Assignment

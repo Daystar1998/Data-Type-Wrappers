@@ -51,7 +51,7 @@ namespace day {
 	// Bitwise NOT
 	shared_ptr<Primitive> Boolean::operator~() {
 
-		shared_ptr<Primitive> result = make_shared<Boolean>(~this->getBool());
+		shared_ptr<Primitive> result = make_shared<Integer>(~this->getBool());
 
 		return result;
 	}

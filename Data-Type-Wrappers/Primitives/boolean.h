@@ -28,6 +28,7 @@
 #pragma once
 
 #include "primitives.h"
+#include "integer.h"
 
 namespace day {
 
